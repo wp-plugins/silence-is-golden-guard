@@ -10,7 +10,8 @@ Silence is Golden Guard WordPress plugin prevents your blog directories from lis
 
 == Description ==
 
-Silence is Golden Guard plugin prevents WordPress blog directories from listing if visitor types just directory name as the URL, e.g. http://yourdomain/wp-content/plugins/
+Silence is Golden Guard plugin prevents WordPress blog directories from listing if visitor types just directory name as the URL, e.g. 
+http://yourdomain/wp-content/plugins/
 Plugin can automatically check WordPress site state and fix it if needed once a day.
 The checking are:
 1) .htaccess file. If it has not Options -Index line, plugins makes
@@ -45,7 +46,7 @@ Dear plugin User,
 if you wish to help me with this plugin translation I very appreciate it. Please send your language .po and .mo files to vladimir@shinephp.com email. Do not forget include you site link in order I can show it with greetings for the translation help at shinephp.com, plugin settings page and in this readme.txt file.
 
 == Special Thanks to ==
-You are welcome! Help me with plugin translation, share with me new ideas about it further development and link your site will appear here.
+You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
 
 == Changelog ==
 = 1.0 = 16.03.2010
