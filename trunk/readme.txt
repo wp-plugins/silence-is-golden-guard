@@ -1,7 +1,7 @@
 === Silence is Golden Guard ===
 Contributors: ShinePHP
 Donate link: http://www.shinephp.com/donate/
-Tags: noindex, htaccess, silence, security
+Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 2.8.
 Tested up to: 2.9.2
 Stable tag: 1.0
@@ -17,10 +17,10 @@ The checking are:
 1) .htaccess file. If it has not Options -Index line, plugins makes
 backup copy and adds Options -Indexes line into .htaccess file in the WordPress
 root directory.
-2) In case .htaccess doesn't work on your site, plugin checks if
+2) In case .htaccess doesn't work on your site, plugin checks if empty
 index.php file exists in the every directory. If index.php file doesn't exist,
-plugin creates the empty one with comments line only 'Silence is golden'.
-This check and fix is useful as many plugin author do not put index.php files into their plugin directories.
+plugin creates one with comments line only 'Silence is golden' exactly as WordPress does.
+This check and fix are useful as many plugin author do not put index.php files into their plugin directories.
 To read more about 'Silence is Golden Guard' visit this link http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin
 
 == Installation ==
