@@ -36,13 +36,13 @@ Installation procedure:
 
 
 == Screenshots ==
-1. screenshot-1.png Silence is Golden Guard plugin Setting page
+1. screenshot-1.png Silence is Golden Guard plugin Settings page
 
 == Translations ==
 * Russian: [ShinePHP](http://shinephp.com)
 
-Dear TYCB plugin User,
-if you wish to help me with this plugin translation I very appreciate it. Please send your language .po and .mo files to vladimir@shinephp.com email. Do not forget include you site link in order I can show it with greetings for the translation help at shinephp.com, TYCB plugin settings page and in this readme.txt file.
+Dear plugin User,
+if you wish to help me with this plugin translation I very appreciate it. Please send your language .po and .mo files to vladimir@shinephp.com email. Do not forget include you site link in order I can show it with greetings for the translation help at shinephp.com, plugin settings page and in this readme.txt file.
 
 == Special Thanks to ==
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link your site will appear here.
