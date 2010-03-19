@@ -50,11 +50,13 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
 
 == Changelog ==
-= 1.1 = 19.03.2010
+= 1.1 = 
+* 19.03.2010
 - Minor bug with usage of the textdomain for the translation is fixed. Thanks to Whiler who found it.
 - French translation is added. Thanks to Whiler again.
 
-= 1.0 = 16.03.2010
+= 1.0 = 
+* 16.03.2010
 - 1st release.
 
 == Additional Documentation ==
