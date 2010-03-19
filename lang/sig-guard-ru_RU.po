@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thank You Counter Button 1.0.02\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-14 23:13+0600\n"
+"POT-Creation-Date: 2010-03-19 20:43+0600\n"
 "PO-Revision-Date: \n"
 "Last-Translator: vladimir <vladimir@shinephp.com>\n"
 "Language-Team: ShinePHP.com <vladimir@shinephp.com>\n"
@@ -26,7 +26,7 @@ msgid "Silence Is Golden Guard Plugin"
 msgstr "Silence Is Golden Guard плагин"
 
 #: ../sig-guard.php:107
-#: ../sig-quard_options.php:77
+#: ../sig-quard_options.php:78
 msgid "Settings"
 msgstr "Установки"
 
@@ -115,22 +115,26 @@ msgid "It's me, the author"
 msgstr "Это я, автор"
 
 #: ../sig-quard_options.php:51
+msgid "for the help with French translation"
+msgstr "за помощь с французским переводом"
+
+#: ../sig-quard_options.php:52
 msgid "Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated."
 msgstr "Желаете увидеть свое имя и ссылку на Ваш сайт здесь? Добро пожаловать! Ваша помощь с переводом и новые идеи приветствуются."
 
-#: ../sig-quard_options.php:83
+#: ../sig-quard_options.php:84
 msgid "Does not create index.php file in the checked folders"
 msgstr "Не создавать index.php файл в отмеченных каталогах"
 
-#: ../sig-quard_options.php:84
+#: ../sig-quard_options.php:85
 msgid "Exclude Folders for index.php"
 msgstr "Исключить Каталоги для index.php"
 
-#: ../sig-quard_options.php:121
+#: ../sig-quard_options.php:122
 msgid "Modify Apache .htaccess"
 msgstr "Изменить Apache .htaccess"
 
-#: ../sig-quard_options.php:124
+#: ../sig-quard_options.php:125
 msgid ""
 "Modify Apache .htaccess file in the site root folder. Add \"Options -Indexes\" line to prevent directory listing by Apache Web server.\n"
 "                      If it is turned on (+Indexes) or absent, then if a URL which maps to a directory is requested, and there is no DirectoryIndex (e.g., index.html or index.php) file in that directory, then Web server will return a formatted listing of the directory."
@@ -138,35 +142,35 @@ msgstr ""
 "Изменить файл Apache .htaccess в корневом каталоге сайта. Добавить строку \"Options -Indexes\", чтобы исключить листинг содержимого катлогов Web сервером Apache.\n"
 "Если опция включена (+Indexes) или отсутствует, тогда, если запроашивается адрес URL, соответствующий каталогу, и в этом каталоге отстутсвует файл типа DirectoryIndex (т.е. index.html или index.php), тогда Web сервер вернёт отформатированный листин этого каталога."
 
-#: ../sig-quard_options.php:131
+#: ../sig-quard_options.php:132
 msgid "Check folders state automatically with specified period"
 msgstr "Проверять состояние каталогов автоматически с заданным периодом"
 
-#: ../sig-quard_options.php:132
+#: ../sig-quard_options.php:133
 msgid "Auto Monitor"
 msgstr "Авто Мониторинг"
 
-#: ../sig-quard_options.php:135
+#: ../sig-quard_options.php:136
 msgid "Scan Now"
 msgstr "Сканировать Сейчас"
 
-#: ../sig-quard_options.php:135
+#: ../sig-quard_options.php:136
 msgid "Scan and Fix directories listing related problems Now"
 msgstr "Сканировать и Исправлять проблемы, связанные с листингом содержимого каталогов"
 
-#: ../sig-quard_options.php:141
+#: ../sig-quard_options.php:142
 msgid "Update"
 msgstr "Сохранить"
 
-#: ../sig-quard_options.php:141
+#: ../sig-quard_options.php:142
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-#: ../sig-quard_options.php:142
+#: ../sig-quard_options.php:143
 msgid "Cancel"
 msgstr "Отмена"
 
-#: ../sig-quard_options.php:142
+#: ../sig-quard_options.php:143
 msgid "Cancel not saved changes"
 msgstr "Отказ от сохранения изменений"
 
@@ -213,8 +217,6 @@ msgstr "Отказ от сохранения изменений"
 #~ msgstr ""
 #~ "за помощь с французским переводом, идеи, вклад в разработку и "
 #~ "тестирование новых версий"
-#~ msgid "for the help with German translation"
-#~ msgstr "за помощь с немецким переводом"
 #~ msgid "for setting page layout idea and html markup examples"
 #~ msgstr "за идею по компоновке экрана с опциями и примеры HTML разметки"
 #~ msgid "for the form input slider code"
