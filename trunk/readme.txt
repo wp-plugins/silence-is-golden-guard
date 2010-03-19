@@ -44,7 +44,7 @@ Installation procedure:
 * French: [Whiler](http://blogs.wittwer.fr/whiler/)
 
 Dear plugin User,
-if you wish to help me with this plugin translation I very appreciate it. Please send your language .po and .mo files to vladimir@shinephp.com email. Do not forget include you site link in order I can show it with greetings for the translation help at shinephp.com, plugin settings page and in this readme.txt file.
+if you wish to help me with this plugin translation I very appreciate it. Please send your language .po and .mo files to vladimir<at-sign>shinephp.com email. Do not forget include your site link in order I can show it with greetings for the translation help at shinephp.com, plugin settings page and in this readme.txt file.
 
 == Special Thanks to ==
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
