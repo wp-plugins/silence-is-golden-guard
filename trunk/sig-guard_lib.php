@@ -300,8 +300,8 @@ function sig_guard_Scan($screenLog = false) {
   }
   
   if ($screenLog) {
-    echo __('"Silence is Golden" Scan is finished: '.$filesCreated.' index.php files are created').$br.$br;
-    echo '<a href="'.SIG_GUARD_WP_ADMIN_URL.'/options-general.php?page=sig-guard.php">Return back to SIG Guard Settings Page</a>'.$br;
+    echo sprintf(__('"Silence is Golden" Scan is finished: %s index.php files are created'), $filesCreated).$br.$br;
+    echo '<a href="'.SIG_GUARD_WP_ADMIN_URL.'/options-general.php?page=sig-guard.php">'.__('Return back to SIG Guard Settings Page','sig-guard').'</a>'.$br;
   }
   update_option('sig_guard_last_check', time());
 }

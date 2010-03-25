@@ -4,7 +4,7 @@ Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 2.8.
 Tested up to: 2.9.2
-Stable tag: 1.1
+Stable tag: 1.2
 
 Silence is Golden Guard WordPress plugin prevents your blog directories from listing if visitor types just directory name as the URL, e.g. http://yourdomain/wp-content/plugins/
 
@@ -40,8 +40,9 @@ Installation procedure:
 1. screenshot-1.png Silence is Golden Guard plugin Settings page
 
 == Translations ==
-* Russian: [ShinePHP](http://shinephp.com)
 * French: [Whiler](http://blogs.wittwer.fr/whiler/)
+* Russian: [Vladimir](http://shinephp.com)
+* Spanish: [Omi](http://equipajedemano.info)
 
 Dear plugin User,
 if you wish to help me with this plugin translation I very appreciate it. Please send your language .po and .mo files to vladimir[at-sign]shinephp.com email. Do not forget include your site link in order I can show it with greetings for the translation help at shinephp.com, plugin settings page and in this readme.txt file.
@@ -50,6 +51,10 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
 
 == Changelog ==
+= 1.2 =
+* 25.03.2010
+- Spanish translation is added.
+
 = 1.1 = 
 * 19.03.2010
 - Minor bug with usage of the textdomain for the translation is fixed. Thanks to Whiler who found it.

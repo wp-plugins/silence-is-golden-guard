@@ -1,186 +1,186 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Silence is Golden Guard 1.2\n"
+"Project-Id-Version: Silence is Golden Guard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-25 23:11+0600\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Vladimir <vladimir@shinephp.com>\n"
-"Language-Team: ShinePHP.com <vladimir@shinephp.com>\n"
+"Language-Team: Omi | http://equipajedemano.info/ <equipajedemano@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: English\n"
-"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: ..\n"
 
 #: ../sig-guard.php:38
 msgid "Silence is Golden Guard requires WordPress 2.8 or newer."
-msgstr ""
+msgstr "Silence is Golden Guard requiere de WordPress 2.8 o superior."
 
 #: ../sig-guard.php:38
 msgid "Please update!"
-msgstr ""
+msgstr "Por favor, actualice"
 
 #: ../sig-guard.php:68
 msgid "Silence Is Golden Guard Plugin"
-msgstr ""
+msgstr "Plugin Silence Is Golden Guard"
 
 #: ../sig-guard.php:107
 #: ../sig-quard_options.php:79
 msgid "Settings"
-msgstr ""
+msgstr "Configuraciones"
 
 #: ../sig-guard.php:117
 #: ../sig-quard_options.php:45
 msgid "Changelog"
-msgstr ""
+msgstr "Registro de cambios"
 
 #: ../sig-guard_lib.php:111
 #: ../sig-guard_lib.php:165
 msgid "file open error"
-msgstr ""
+msgstr "error abriendo fichero"
 
 #: ../sig-guard_lib.php:121
 msgid "file read error"
-msgstr ""
+msgstr "error leyendo fichero"
 
 #: ../sig-guard_lib.php:134
 #: ../sig-guard_lib.php:197
 #: ../sig-guard_lib.php:273
 msgid "file close error"
-msgstr ""
+msgstr "error cerrando fichero"
 
 #: ../sig-guard_lib.php:145
 msgid "file backup copy error"
-msgstr ""
+msgstr "error copiando fichero de respaldo"
 
 #: ../sig-guard_lib.php:153
 #: ../sig-guard_lib.php:205
 msgid "file permissions change error"
-msgstr ""
+msgstr "error al cambiar los permisos al fichero"
 
 #: ../sig-guard_lib.php:173
 #: ../sig-guard_lib.php:181
 #: ../sig-guard_lib.php:189
 #: ../sig-guard_lib.php:264
 msgid "file write error"
-msgstr ""
+msgstr "error escribiendo archivo"
 
 #: ../sig-guard_lib.php:213
 msgid "is modified"
-msgstr ""
+msgstr "es modificado"
 
 #: ../sig-guard_lib.php:256
 msgid "file create error"
-msgstr ""
+msgstr "error creando archivo"
 
 #: ../sig-guard_lib.php:281
 msgid "permissions change error"
-msgstr ""
+msgstr "error cambiando permisos"
 
 #: ../sig-guard_lib.php:290
 msgid "file is created"
-msgstr ""
+msgstr "archivo creado"
 
 #: ../sig-guard_lib.php:303
 #, php-format
 msgid "\"Silence is Golden\" Scan is finished: %s index.php files are created"
-msgstr ""
+msgstr "Análisis \"Silence is Golden\" terminado: %s index.php los archivos se crean"
 
 #: ../sig-guard_lib.php:304
 msgid "Return back to SIG Guard Settings Page"
-msgstr ""
+msgstr "Regreso a  SIG Guard página de Configuración"
 
 #: ../sig-quard_options.php:42
 msgid "About this Plugin:"
-msgstr ""
+msgstr "Sobre este Plugin:"
 
 #: ../sig-quard_options.php:43
 msgid "Author's website"
-msgstr ""
+msgstr "Web del autor"
 
 #: ../sig-quard_options.php:44
 msgid "Plugin webpage"
-msgstr ""
+msgstr "Página web del plugin"
 
 #: ../sig-quard_options.php:46
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: ../sig-quard_options.php:47
 msgid "Donate"
-msgstr ""
+msgstr "Donaciones"
 
 #: ../sig-quard_options.php:49
 msgid "Greetings:"
-msgstr ""
+msgstr "Saludos:"
 
 #: ../sig-quard_options.php:50
 msgid "It's me, the author"
-msgstr ""
+msgstr "Soy yo, el autor"
 
 #: ../sig-quard_options.php:51
 msgid "for the help with French translation"
-msgstr ""
+msgstr "por su ayuda con la traducción al francés"
 
 #: ../sig-quard_options.php:52
 msgid "for the help with Spanish translation"
-msgstr ""
+msgstr "por la ayuda con traducción al español"
 
 #: ../sig-quard_options.php:53
 msgid "Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated."
-msgstr ""
+msgstr "¿Quieres ver aquí tu nombre y un enlace a tu sitio web? ¡Eres bienvenido! Tu ayuda con las traducciones o con nuevas ideas será muy apreciada."
 
 #: ../sig-quard_options.php:85
 msgid "Does not create index.php file in the checked folders"
-msgstr ""
+msgstr "No crear archivo index.php en las carpetas seleccionadas"
 
 #: ../sig-quard_options.php:86
 msgid "Exclude Folders for index.php"
-msgstr ""
+msgstr "Excluir carpetas"
 
 #: ../sig-quard_options.php:123
 msgid "Modify Apache .htaccess"
-msgstr ""
+msgstr "Modificar .htaccess"
 
 #: ../sig-quard_options.php:126
 msgid ""
 "Modify Apache .htaccess file in the site root folder. Add \"Options -Indexes\" line to prevent directory listing by Apache Web server.\n"
 "                      If it is turned on (+Indexes) or absent, then if a URL which maps to a directory is requested, and there is no DirectoryIndex (e.g., index.html or index.php) file in that directory, then Web server will return a formatted listing of the directory."
 msgstr ""
+"Modificar archivo .htaccess en la raíz del sitio. Añade línea \"Options -Indexes\" para prevenir el listado de directorios en un servidor web Apache.\n"
+"                      Caso de estar activo (+Indexes) o ausente, si se solicita una URL que apunte a un directorio, y no existe archivo DirectoryIndex (p.ej., index.html o index.php) en ese directorio, el servidor Web devolverá un listado formateado del directorio."
 
 #: ../sig-quard_options.php:133
 msgid "Check folders state automatically with specified period"
-msgstr ""
+msgstr "Comprueba automáticamente el estado de las carpetas tras el tiempo especificado"
 
 #: ../sig-quard_options.php:134
 msgid "Auto Monitor"
-msgstr ""
+msgstr "Autoanalizar"
 
 #: ../sig-quard_options.php:137
 msgid "Scan Now"
-msgstr ""
+msgstr "Analizar ahora"
 
 #: ../sig-quard_options.php:137
 msgid "Scan and Fix directories listing related problems Now"
-msgstr ""
+msgstr "Analizar y Corregir problemas relacionados con el listado de directorios Ahora"
 
 #: ../sig-quard_options.php:143
 msgid "Update"
-msgstr ""
+msgstr "Actualizar"
 
 #: ../sig-quard_options.php:143
 msgid "Save Changes"
-msgstr ""
+msgstr "Grabar Cambios"
 
 #: ../sig-quard_options.php:144
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: ../sig-quard_options.php:144
 msgid "Cancel not saved changes"
-msgstr ""
+msgstr "Anular cambios no guardados"
 
