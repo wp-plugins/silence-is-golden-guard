@@ -1,7 +1,7 @@
 <?php
 /* 
  * Silence Is Golden Guard plugin Settings form
- * 
+ * Author: Vladimir Garagulya vladimir@shinephp.com
  */
 
 if (!defined('SIG_GUARD_PLUGIN_URL')) {
@@ -27,8 +27,12 @@ function sig_guard_displayBoxEnd() {
 
 $mess = '';
 $shinephpFavIcon = SIG_GUARD_PLUGIN_URL.'/images/vladimir.png';
-if (isset($_GET['action']) && $_GET['action']=='scan') {
-  sig_guard_Scan(true);
+if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebuild')) {
+  if ($_GET['action']=='scan') {
+    sig_guard_Scan(true);
+  } else {
+    sig_guard_Scan(true, true);
+  }
   return;
 }
 ?>
@@ -69,8 +73,8 @@ if (isset($_GET['action']) && $_GET['action']=='scan') {
   function sig_guard_Settings(action) {
     if (action=='cancel') {
       document.location = '<?php echo SIG_GUARD_WP_ADMIN_URL; ?>/options-general.php?page=sig-guard.php';
-    } else if (action=='scan') {
-      document.location = '<?php echo SIG_GUARD_WP_ADMIN_URL; ?>/options-general.php?page=sig-guard.php&action=scan';
+    } else if (action=='scan' || action=='rebuild') {
+      document.location = '<?php echo SIG_GUARD_WP_ADMIN_URL; ?>/options-general.php?page=sig-guard.php&action='+ action;
     }
   }
 
@@ -80,13 +84,14 @@ if (isset($_GET['action']) && $_GET['action']=='scan') {
         <table class="form-table" style="clear:none;" cellpadding="0" cellspacing="0">          
           <tr>
             <td style="vertical-align:top;width:200px;">
-              <input type="checkbox" value="1" <?php echo ($sig_guard_exclude_folders=='1') ? 'checked="checked"' : ''; ?>
+              <input type="checkbox" value="1" <?php echo sig_guard_optionChecked($sig_guard_exclude_folders, 1); ?>
                        name="sig_guard_exclude_folders" id="sig_guard_exclude_folders" onclick="sig_guard_hideShowDiv(this)"
                        title="<?php _e('Does not create index.php file in the checked folders'); ?>"/>
-	             <?php _e('Exclude Folders for index.php','sig-guard'); ?>
+	             <label for="sig_guard_exclude_folders"><?php _e('Exclude Folders','sig-guard'); ?></label>
             </td>
             <td>                      
-<?php 
+<?php
+  _e('Checked folders are fully excluded from SIG Guard plugin activity','sig-guard');
   $folders = sig_guard_getBlogFolders();
 
 ?>
@@ -117,10 +122,23 @@ if (isset($_GET['action']) && $_GET['action']=='scan') {
                 </div>                
             </td>
           </tr>
-          <tr>
+        <tr>
+          <td style="vertical-align:top;">
+            <input type="checkbox" value="1" <?php echo sig_guard_optionChecked($sig_guard_redirect_tohomepage, 1); ?>
+                   name="sig_guard_redirect_tohomepage" id="sig_guard_redirect_tohomepage" />
+            <label for="sig_guard_redirect_tohomepage"><?php _e('index.php Redirect','sig-guard'); ?></label><br/>
+            <div class="submit" style="margin-left:10px;">
+              <input type="button" name="rebuild" value="<?php _e('Rebuild All', 'sig-guard') ?>" title="<?php _e('Rebuild All subfolder index.php files. It is useful if you changed redirection option above.','sig-guard');?>" onclick="sig_guard_Settings('rebuild');"/>
+            </div>
+          </td>
+          <td>
+            <?php echo __('If it does not checked, subfolder index.php will show empty page only. If it is checked, any request for subfolder content listing will be redirected to your blog root','sig-guard').' '.$sig_siteURL; ?>
+          </td>
+        </tr>
+        <tr>
           <td style="vertical-align: top;">
             <input type="checkbox" name="sig_guard_use_htaccess" id="sig_guard_use_htaccess" value="1" <?php echo sig_guard_optionChecked($sig_guard_use_htaccess, 1); ?> />
-            <?php _e('Modify Apache .htaccess', 'sig-guard'); ?>
+            <label for="sig_guard_use_htaccess"><?php _e('Modify Apache .htaccess', 'sig-guard'); ?></label>
           </td>
           <td>
             <?php _e('Modify Apache .htaccess file in the site root folder. Add "Options -Indexes" line to prevent directory listing by Apache Web server.
@@ -128,20 +146,51 @@ if (isset($_GET['action']) && $_GET['action']=='scan') {
           </td>
         </tr>
         <tr>
+          <td style="vertical-align:top;">
+            <input type="checkbox" value="1" <?php echo sig_guard_optionChecked($sig_guard_delete_readme, 1); ?>
+                   name="sig_guard_delete_readme" id="sig_guard_delete_readme" />
+            <label for="sig_guard_delete_readme"><?php _e('Delete readme.txt','sig-guard'); ?></label>
+          </td>
           <td>
-            <input type="checkbox" name="sig_guard_auto_monitor" id="sig_guard_auto_monitor" value="1" <?php echo sig_guard_optionChecked($sig_guard_auto_monitor, 1); ?>
-                   title="<?php _e('Check folders state automatically with specified period'); ?>"/>
+            <?php _e('If it is checked, plugin will delete unused readme.txt, documentation.txt, changelog.txt files from every plugin folder','sig-guard'); ?>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top;">
+            <input type="checkbox" value="1" <?php echo sig_guard_optionChecked($sig_guard_delete_screenshot, 1); ?>
+                   name="sig_guard_delete_screenshot" id="sig_guard_delete_screenshot"/>
+            <label for="sig_guard_delete_screenshot"><?php _e('Delete screenshot files','sig-guard'); ?></label>
+          </td>
+          <td>
+            <?php _e('If it is checked, plugin will delete unused screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg) from every plugin folder','sug-guard'); ?>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="sig_guard_auto_monitor" id="sig_guard_auto_monitor" value="1" <?php echo sig_guard_optionChecked($sig_guard_auto_monitor, 1); ?>/>
             <label for="sig_guard_auto_monitor"><?php _e('Auto Monitor','sig-guard'); ?></label>
           </td>
           <td class="submit">
-            <input type="button" name="scanNow" value="<?php _e('Scan Now', 'sig-guard') ?>" title="<?php _e('Scan and Fix directories listing related problems Now','sig-guard');?>" onclick="sig_guard_Settings('scan');"/>
+            <?php _e('Check folders state automatically once a day'); ?>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top;">
+            <input type="checkbox" value="1" <?php echo sig_guard_optionChecked($sig_guard_hide_wordpress_version, 1); ?>
+                   name="sig_guard_hide_wordpress_version" id="sig_guard_hide_wordpress_version" />
+            <label for="sig_guard_hide_wordpress_version"><?php _e('Hide WordPress version','sig-guard'); ?></label>
+          </td>
+          <td>
+            <?php _e('If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name="generator" content="WordPress 2.9.2"/&gt; from your blog pages','sig_guard'); ?>
           </td>
         </tr>
       </table>
+      <span style="color: green;">Note: Save your changes in options by press "Update" button before take any Rebuild or Scan actions.</span>
 			<?php sig_guard_displayBoxEnd();?>
       <div class="fli submit" style="padding-top: 0px;">
           <input type="submit" name="submit" value="<?php _e('Update', 'sig-guard'); ?>" title="<?php _e('Save Changes', 'sig-guard'); ?>" />
           <input type="button" name="cancel" value="<?php _e('Cancel', 'sig-guard') ?>" title="<?php _e('Cancel not saved changes','sig-guard');?>" onclick="sig_guard_Settings('cancel');"/>
+          <input type="button" name="scanNow" value="<?php _e('Scan Now', 'sig-guard') ?>" title="<?php _e('Scan and Fix directories, plugins version listing related problems Now','sig-guard');?>" onclick="sig_guard_Settings('scan');"/>
       </div>
 						</div>
 					</div>

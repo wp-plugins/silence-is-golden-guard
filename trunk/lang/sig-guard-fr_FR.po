@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Silence Is Golden Guard Plugin 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-25 23:11+0600\n"
+"POT-Creation-Date: 2010-04-11 22:16+0600\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Vladimir <vladimir@shinephp.com>\n"
+"Last-Translator: vladimir <vladimir@shinephp.com>\n"
 "Language-Team: Whiler <webmaster@blogs.wittwer.fr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,129 +20,169 @@ msgstr "Silence is Golden Guard requiert WordPress 2.8 ou plsu récent."
 msgid "Please update!"
 msgstr "Veuillez mettre à jour !"
 
-#: ../sig-guard.php:68
+#: ../sig-guard.php:73
 msgid "Silence Is Golden Guard Plugin"
 msgstr "Extension Silence is Golden Guard"
 
-#: ../sig-guard.php:107
-#: ../sig-quard_options.php:79
+#: ../sig-guard.php:120
+#: ../sig-quard_options.php:83
 msgid "Settings"
 msgstr "Réglages"
 
-#: ../sig-guard.php:117
-#: ../sig-quard_options.php:45
+#: ../sig-guard.php:130
+#: ../sig-quard_options.php:49
 msgid "Changelog"
 msgstr "Révisions"
 
-#: ../sig-guard_lib.php:111
-#: ../sig-guard_lib.php:165
+#: ../sig-guard_lib.php:117
+#: ../sig-guard_lib.php:171
+#: ../sig-guard_lib.php:271
 msgid "file open error"
 msgstr "Erreur lors de l'ouverture du fichier"
 
-#: ../sig-guard_lib.php:121
+#: ../sig-guard_lib.php:127
 msgid "file read error"
 msgstr "Erreur lors de la lecture du fichier"
 
-#: ../sig-guard_lib.php:134
-#: ../sig-guard_lib.php:197
-#: ../sig-guard_lib.php:273
+#: ../sig-guard_lib.php:140
+#: ../sig-guard_lib.php:203
+#: ../sig-guard_lib.php:313
 msgid "file close error"
 msgstr "Erreur lors de la fermeture du fichier"
 
-#: ../sig-guard_lib.php:145
+#: ../sig-guard_lib.php:151
 msgid "file backup copy error"
 msgstr "Erreur lors de la copie de sauvegarde"
 
-#: ../sig-guard_lib.php:153
-#: ../sig-guard_lib.php:205
+#: ../sig-guard_lib.php:159
+#: ../sig-guard_lib.php:211
 msgid "file permissions change error"
 msgstr "Erreur lors du changement de permission du fichier"
 
-#: ../sig-guard_lib.php:173
-#: ../sig-guard_lib.php:181
-#: ../sig-guard_lib.php:189
-#: ../sig-guard_lib.php:264
+#: ../sig-guard_lib.php:179
+#: ../sig-guard_lib.php:187
+#: ../sig-guard_lib.php:195
+#: ../sig-guard_lib.php:304
 msgid "file write error"
 msgstr "Erreur lors de l'écriture du fichier"
 
-#: ../sig-guard_lib.php:213
+#: ../sig-guard_lib.php:219
 msgid "is modified"
 msgstr "est modifié"
 
-#: ../sig-guard_lib.php:256
-msgid "file create error"
-msgstr "Erreur lors de la création du fichier"
-
-#: ../sig-guard_lib.php:281
+#: ../sig-guard_lib.php:229
+#: ../sig-guard_lib.php:321
 msgid "permissions change error"
 msgstr "Erreur de changement de permission"
 
-#: ../sig-guard_lib.php:290
+#: ../sig-guard_lib.php:246
+msgid "file delete error"
+msgstr ""
+
+#: ../sig-guard_lib.php:296
+msgid "file create error"
+msgstr "Erreur lors de la création du fichier"
+
+#: ../sig-guard_lib.php:330
 msgid "file is created"
 msgstr "Le fichier a été créé"
 
-#: ../sig-guard_lib.php:303
-#, php-format
-msgid "\"Silence is Golden\" Scan is finished: %s index.php files are created"
-msgstr "Le scan \"Silence is Golden\" est terminé&nbsp;: %s index.php fichiers sont créés"
+#: ../sig-guard_lib.php:353
+#: ../sig-guard_lib.php:394
+msgid "is deleted"
+msgstr ""
 
-#: ../sig-guard_lib.php:304
+#: ../sig-guard_lib.php:482
+msgid "\"Silence is Golden\" scan is finished:"
+msgstr "Le scan \"Silence is Golden\" est terminé&nbsp;:"
+
+#: ../sig-guard_lib.php:483
+#, php-format
+msgid "%s index.php files are created"
+msgstr " %s index.php fichiers sont créés"
+
+#: ../sig-guard_lib.php:484
+#, php-format
+msgid "%s unused files are deleted"
+msgstr ""
+
+#: ../sig-guard_lib.php:485
 msgid "Return back to SIG Guard Settings Page"
 msgstr "Retour à la SIG Guard page de configuration"
 
-#: ../sig-quard_options.php:42
+#: ../sig-quard_options.php:46
 msgid "About this Plugin:"
 msgstr "A propos de cette extension&nbsp;:"
 
-#: ../sig-quard_options.php:43
+#: ../sig-quard_options.php:47
 msgid "Author's website"
 msgstr "Site Web de l'auteur"
 
-#: ../sig-quard_options.php:44
+#: ../sig-quard_options.php:48
 msgid "Plugin webpage"
 msgstr "Page Web de l'extension"
 
-#: ../sig-quard_options.php:46
+#: ../sig-quard_options.php:50
 msgid "FAQ"
 msgstr "FAQ"
 
-#: ../sig-quard_options.php:47
+#: ../sig-quard_options.php:51
 msgid "Donate"
 msgstr "Faire un don"
 
-#: ../sig-quard_options.php:49
+#: ../sig-quard_options.php:53
 msgid "Greetings:"
 msgstr "remerciements&nbsp;:"
 
-#: ../sig-quard_options.php:50
+#: ../sig-quard_options.php:54
 msgid "It's me, the author"
 msgstr "C'est moi, l'auteur"
 
-#: ../sig-quard_options.php:51
+#: ../sig-quard_options.php:55
 msgid "for the help with French translation"
 msgstr "pour l'aide avec la traduction fran&ccedil;aise"
 
-#: ../sig-quard_options.php:52
+#: ../sig-quard_options.php:56
 msgid "for the help with Spanish translation"
 msgstr "pour l'aide à la traduction en espagnol"
 
-#: ../sig-quard_options.php:53
+#: ../sig-quard_options.php:57
 msgid "Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated."
 msgstr "Vous souhaitez voir votre nom avec votre lien vers votre site Web ici ? Avec plaisir ! Votre aide avec la traduction ou de nouvelles idées seront très appréciées."
 
-#: ../sig-quard_options.php:85
+#: ../sig-quard_options.php:89
 msgid "Does not create index.php file in the checked folders"
 msgstr "Ne pas créer de fichier index.php dans les répertoires cochés"
 
-#: ../sig-quard_options.php:86
-msgid "Exclude Folders for index.php"
-msgstr "Exclure des répertoires pour le fichier index.php"
+#: ../sig-quard_options.php:90
+msgid "Exclude Folders"
+msgstr "Exclure des répertoires"
 
-#: ../sig-quard_options.php:123
+#: ../sig-quard_options.php:94
+msgid "Checked folders are fully excluded from SIG Guard plugin activity"
+msgstr ""
+
+#: ../sig-quard_options.php:129
+msgid "index.php Redirect"
+msgstr ""
+
+#: ../sig-quard_options.php:131
+msgid "Rebuild All"
+msgstr ""
+
+#: ../sig-quard_options.php:131
+msgid "Rebuild All subfolder index.php files. It is useful if you changed redirection option above."
+msgstr ""
+
+#: ../sig-quard_options.php:135
+msgid "If it does not checked, subfolder index.php will show empty page only. If it is checked, any request for subfolder content listing will be redirected to your blog root"
+msgstr ""
+
+#: ../sig-quard_options.php:141
 msgid "Modify Apache .htaccess"
 msgstr "Modifier le fichier .htaccess d'Apache"
 
-#: ../sig-quard_options.php:126
+#: ../sig-quard_options.php:144
 msgid ""
 "Modify Apache .htaccess file in the site root folder. Add \"Options -Indexes\" line to prevent directory listing by Apache Web server.\n"
 "                      If it is turned on (+Indexes) or absent, then if a URL which maps to a directory is requested, and there is no DirectoryIndex (e.g., index.html or index.php) file in that directory, then Web server will return a formatted listing of the directory."
@@ -150,35 +190,61 @@ msgstr ""
 "Modifier le fichier .htaccess d'Apache dans le répertoire racine du site. Ajoute la ligne \"Options -Indexes\" pour empêcher l'exploration des fichiers du serveur Web Apache.\n"
 "                      Si cela est actif (+Indexes) ou manquant, alors si une URL qui pointe un répertoire est demandée, et qu'il n'y a pas de fichier du DirectoryIndex (par exemple, index.html ou index.php) dans ce répertoire, alors le serveur Web renvoie la liste des sous-répertoires et fichiers de ce répertoire."
 
-#: ../sig-quard_options.php:133
-msgid "Check folders state automatically with specified period"
-msgstr "Vérifier l'état des répertoires automatiquement à un intervalle défini"
+#: ../sig-quard_options.php:152
+msgid "Delete readme.txt"
+msgstr ""
 
-#: ../sig-quard_options.php:134
+#: ../sig-quard_options.php:155
+msgid "If it is checked, plugin will delete unused readme.txt, documentation.txt, changelog.txt files from every plugin folder"
+msgstr ""
+
+#: ../sig-quard_options.php:162
+msgid "Delete screenshot files"
+msgstr ""
+
+#: ../sig-quard_options.php:165
+msgid "If it is checked, plugin will delete unused screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg) from every plugin folder"
+msgstr ""
+
+#: ../sig-quard_options.php:171
 msgid "Auto Monitor"
 msgstr "Surveillance automatique"
 
-#: ../sig-quard_options.php:137
-msgid "Scan Now"
-msgstr "Vérifier maintenant"
+#: ../sig-quard_options.php:174
+#, fuzzy
+msgid "Check folders state automatically once a day"
+msgstr "Vérifier l'état des répertoires automatiquement à un intervalle défini"
 
-#: ../sig-quard_options.php:137
-msgid "Scan and Fix directories listing related problems Now"
-msgstr "Vérifie et fixe les problèmes liés à l'exploration des répertoires Maintenant"
+#: ../sig-quard_options.php:181
+msgid "Hide WordPress version"
+msgstr ""
 
-#: ../sig-quard_options.php:143
+#: ../sig-quard_options.php:184
+msgid "If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name=\"generator\" content=\"WordPress 2.9.2\"/&gt; from your blog pages"
+msgstr ""
+
+#: ../sig-quard_options.php:191
 msgid "Update"
 msgstr "Enregistrer les modifications"
 
-#: ../sig-quard_options.php:143
+#: ../sig-quard_options.php:191
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
-#: ../sig-quard_options.php:144
+#: ../sig-quard_options.php:192
 msgid "Cancel"
 msgstr "Annuler"
 
-#: ../sig-quard_options.php:144
+#: ../sig-quard_options.php:192
 msgid "Cancel not saved changes"
 msgstr "Annuler ne sauvegarde pas les changements"
+
+#: ../sig-quard_options.php:193
+msgid "Scan Now"
+msgstr "Vérifier maintenant"
+
+#: ../sig-quard_options.php:193
+#, fuzzy
+msgid "Scan and Fix directories, plugins version listing related problems Now"
+msgstr "Vérifie et fixe les problèmes liés à l'exploration des répertoires Maintenant"
 

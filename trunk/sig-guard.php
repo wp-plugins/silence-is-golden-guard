@@ -3,7 +3,7 @@
 Plugin Name: Silence Is Golden Guard
 Plugin URI: http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/
 Description: It prevents your blog directories from full file listing if visitor types just directory name as the URL, e.g. http://yourdomain/wp-content/plugins/
-Version: 1.2
+Version: 1.3
 Author: Vladimir Garagulya
 Author URI: http://www.shinephp.com
 Text Domain: sig-guard
@@ -11,7 +11,7 @@ Domain Path: /lang/
 */
 
 /*
-Copyright 2009  Vladimir Garagulya  (email: vladimir@shinephp.com)
+Copyright 2010  Vladimir Garagulya  (email: vladimir@shinephp.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -54,12 +54,17 @@ function sig_guard_optionsPage() {
     die('action is forbidden');
   }
 
+  global $sig_siteURL;
 
   $sig_guard_use_htaccess = get_option('sig_guard_use_htaccess');
   $sig_guard_auto_monitor = get_option('sig_guard_auto_monitor');
   $sig_guard_monitor_period = get_option('sig_guard_monitor_period');
   $sig_guard_exclude_folders = get_option('sig_guard_exclude_folders');
   $sig_guard_exclude_folders_list = get_option('sig_guard_exclude_folders_list');
+  $sig_guard_delete_readme = get_option('sig_guard_delete_readme');
+  $sig_guard_delete_screenshot = get_option('sig_guard_delete_screenshot');
+  $sig_guard_redirect_tohomepage = get_option('sig_guard_redirect_tohomepage');
+  $sig_guard_hide_wordpress_version = get_option('sig_guard_hide_wordpress_version');
   
 ?>
 
@@ -83,7 +88,17 @@ function sig_guard_install() {
   add_option('sig_guard_exclude_folders', 0);
   add_option('sig_guard_exclude_folders_list', array());
   add_option('sig_guard_last_check', time());
-
+  add_option('sig_guard_delete_readme', 0);
+  add_option('sig_guard_delete_screenshot', 0);
+  add_option('sig_guard_redirect_tohomepage', 0);
+  add_option('sig_guard_hide_wordpress_version', 0);
+  $logFileName = SIG_GUARD_PLUGIN_DIR.SIG_GUARD_DIR_SLASH.'sig-guard.log';
+  if (SIG_WINDOWS_SERVER) {
+    $logFileName = str_replace('/', SIG_GUARD_DIR_SLASH, $logFileName);
+  }
+  if (file_exists($logFileName)) {
+    sig_fileRemove($logFileName);
+  }
   sig_guard_logEvent('SIG Guard Plugin is installed successfully.');
 }
 // end of sig_guard_install()
@@ -97,6 +112,10 @@ function sig_guard_init() {
     register_setting('sig-quard-options', 'sig_guard_monitor_period');
     register_setting('sig-quard-options', 'sig_guard_exclude_folders');
     register_setting('sig-quard-options', 'sig_guard_exclude_folders_list');
+    register_setting('sig-quard-options', 'sig_guard_delete_readme');
+    register_setting('sig-quard-options', 'sig_guard_delete_screenshot');
+    register_setting('sig-quard-options', 'sig_guard_redirect_tohomepage');
+    register_setting('sig-quard-options', 'sig_guard_hide_wordpress_version');
   }
 }
 // end of sig_guard_init()
@@ -160,6 +179,12 @@ if ($sig_guard_auto_monitor) {
   // end of sig_guard_action()
 
   add_action('wp_head', 'sig_guard_action');
+}
+
+$sig_guard_hide_wordpress_version = get_option('sig_guard_hide_wordpress_version');
+if ($sig_guard_hide_wordpress_version) {
+  // exclude WP version from the HTML header
+  add_filter( 'the_generator', create_function('$sig_guard_hide_wordpress_version', "return null;"));
 }
 
 ?>

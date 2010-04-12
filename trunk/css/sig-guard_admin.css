@@ -63,7 +63,7 @@ input.warning:hover, a.warning:hover {
 #foldersdiv {
   border-style:solid;
   border-width:1px;
-  height:300px;
+  height:180px;
   width: 450px;
   overflow:auto;
   padding:0.5em 0.9em;

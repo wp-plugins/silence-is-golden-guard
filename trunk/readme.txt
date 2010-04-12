@@ -2,11 +2,11 @@
 Contributors: ShinePHP
 Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
-Requires at least: 2.8.
-Tested up to: 2.9.2
-Stable tag: 1.2
+Requires at least: 2.8
+Tested up to: 3.0
+Stable tag: 1.3
 
-Silence is Golden Guard WordPress plugin prevents your blog directories from listing if visitor types just directory name as the URL, e.g. http://yourdomain/wp-content/plugins/
+Silence is Golden Guard WordPress plugin prevents your blog directories from listing with redirect to home page, removes unused files from plugin folders, which could expose plugin versions to attacker.
 
 == Description ==
 
@@ -17,10 +17,14 @@ The checking are:
 1) .htaccess file. If it has not Options -Index line, plugins makes
 backup copy and adds Options -Indexes line into .htaccess file in the WordPress
 root directory.
-2) In case .htaccess doesn't work on your site, plugin checks if empty
-index.php file exists in the every directory. If index.php file doesn't exist,
+2) Plugin can check if empty index.php file exists in the every directory. If index.php file doesn't exist,
 plugin creates one with comments line only 'Silence is golden' exactly as WordPress does.
 This check and fix are useful as many plugin author do not put index.php files into their plugin directories.
+Redirect to the site root option is available.
+Other functions:
+- remove unused files (readme.txt, screenshot-*.*)  from plugin folders, which could expose plugin versions to attacker.
+- remove WordPress version information from blog pages.
+
 To read more about 'Silence is Golden Guard' visit this link http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin
 
 == Installation ==
@@ -38,6 +42,7 @@ Installation procedure:
 
 == Screenshots ==
 1. screenshot-1.png Silence is Golden Guard plugin Settings page
+2. screenshot-2.png SIG Guard plugin Scan results
 
 == Translations ==
 * French: [Whiler](http://blogs.wittwer.fr/whiler/)
@@ -51,18 +56,24 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
 
 == Changelog ==
+
+= 1.3 =
+* 12.04.2010
+* Spanish translation is added.
+
+
 = 1.2 =
 * 25.03.2010
-- Spanish translation is added.
+* Spanish translation is added.
 
 = 1.1 = 
 * 19.03.2010
-- Minor bug with usage of the textdomain for the translation is fixed. Thanks to Whiler who found it.
-- French translation is added. Thanks to Whiler again.
+* Minor bug with usage of the textdomain for the translation is fixed. Thanks to Whiler who found it.
+* French translation is added. Thanks to Whiler again.
 
 = 1.0 = 
 * 16.03.2010
-- 1st release.
+* 1st release.
 
 == Additional Documentation ==
 
