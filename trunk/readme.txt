@@ -14,16 +14,16 @@ Silence is Golden Guard plugin prevents WordPress blog directories from listing 
 http://yourdomain/wp-content/plugins/
 Plugin can automatically check WordPress site state and fix it if needed once a day.
 The checking are:
-1) .htaccess file. If it has not Options -Index line, plugins makes
+* .htaccess file. If it has not Options -Index line, plugins makes
 backup copy and adds Options -Indexes line into .htaccess file in the WordPress
 root directory.
-2) Plugin can check if empty index.php file exists in the every directory. If index.php file doesn't exist,
+* Plugin can check if empty index.php file exists in the every directory. If index.php file doesn't exist,
 plugin creates one with comments line only 'Silence is golden' exactly as WordPress does.
 This check and fix are useful as many plugin author do not put index.php files into their plugin directories.
 Redirect to the site root option is available.
-Other functions:
-- remove unused files (readme.txt, screenshot-*.*)  from plugin folders, which could expose plugin versions to attacker.
-- remove WordPress version information from blog pages.
+* Other functions:
+* remove unused files (readme.txt, screenshot-*.*)  from plugin folders, which could expose plugin versions to attacker.
+* remove WordPress version information from blog pages.
 
 To read more about 'Silence is Golden Guard' visit this link http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin
 
@@ -59,8 +59,10 @@ You are welcome! Help me with plugin translation, share with me new ideas about 
 
 = 1.3 =
 * 12.04.2010
-* Spanish translation is added.
-
+* Redirect to the site root for directory listing requests option is added.
+* All index.php rebuild function is added (in case you change index.php type you use from empty page to redirection or back);
+* Unused plugins files readme.txt, screenshot- remove options are added. Such file expose plugin verision to attacker easy.
+* Remove WordPress version from your blog pages option is added.
 
 = 1.2 =
 * 25.03.2010
