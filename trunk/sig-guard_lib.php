@@ -29,6 +29,7 @@ define('SIG_GUARD_PLUGIN_DIR', WP_PLUGIN_DIR.'/'.$sig_guardPluginDirName);
 define('SIG_GUARD_WP_ADMIN_URL', $sig_siteURL.'/wp-admin');
 define('SIG_GUARD_ERROR', 'Error is encountered');
 define('SIG_GUARD_SIG_MESS', '// Silence is golden.');
+define('SIG_GUARD_PLUGIN_STAMP', '// This file was created automatically by Silence is Golden Guard plugin');
 
 $tmp = dirname(__FILE__);
 if(strpos($tmp, '/', 0)!==false) {
@@ -240,7 +241,7 @@ function sig_fileRemove($fileName, $screenLog=false) {
     }
   } else {
     $lines = array();
-    exec("DEL /F/Q \"$fileName\"", $lines, $errorCode);
+    exec("DEL /F/Q \"$fileName\"", $lines, $deleteError);
   }
   if ($deleteError) {
     chmod($fileName, 0755);
@@ -266,7 +267,7 @@ function sig_indexFileCheck($indexFile, $sig_mess, $rebuildIndexFile, $screenLog
 
   $errMess = '';
   if ($fileExists) {
-// check if it is Silence is golden dummy index.php to not rewrite important file which can belong to othe application    
+// check if it is Silence is golden dummy index.php to not rewrite important file which can belong to other application
     $fh = fopen($indexFile,'r');
     if (!$fh) {
       $errMess = $indexFile.' '.__('file open error');
@@ -277,10 +278,15 @@ function sig_indexFileCheck($indexFile, $sig_mess, $rebuildIndexFile, $screenLog
       return false;
     }
     $itsMyFile = false;
+    $rows = 0;
     while (!feof($fh)) {
       $s = fgets($fh);
-      if (strpos($s, SIG_GUARD_SIG_MESS)!==false) {
+      $rows++;
+      if (strpos($s, SIG_GUARD_PLUGIN_STAMP)!==false) {
         $itsMyFile = true;
+      }
+      if ($rows>4) { // SIG-made index.php can contain only 4 lines, not more
+        $itsMyFile = false;
         break;
       }
     }
@@ -423,10 +429,12 @@ function sig_guard_Scan($screenLog = false, $rebuildIndexFile = false) {
   $sig_guard_delete_screenshot = get_option('sig_guard_delete_screenshot');
 
   $br = '<br/>'; 
-  $sig_mess = "<?php\r\n".SIG_GUARD_SIG_MESS."\r\n";
+  $sig_mess = "<?php\r\n".SIG_GUARD_PLUGIN_STAMP."\r\n";
 
   if ($sig_guard_redirect_tohomepage) {
     $sig_mess .= 'header("Location: '.$sig_siteURL.'");'."\r\n";
+  } else {
+    $sig_mess .= SIG_GUARD_SIG_MESS."\r\n";
   }
   $sig_mess .= '?>';
   
