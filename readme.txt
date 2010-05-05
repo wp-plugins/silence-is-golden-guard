@@ -4,7 +4,7 @@ Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 2.8
 Tested up to: 3.0
-Stable tag: 1.3
+Stable tag: 1.4
 
 Silence is Golden Guard WordPress plugin prevents your blog directories from listing with redirect to home page, removes unused files from plugin folders, which could expose plugin versions to attacker.
 
@@ -56,6 +56,12 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
 
 == Changelog ==
+
+= 1.4 =
+* 05.05.2010
+* Checking if index.php file is SIG Guard plugin made file and can be rewritten is updated in try to exclude rare cases when SIG Guard rewrites important index.php file, e.g. in the current theme folder. SIG Guard own stamp string verification is added. File with more than 4 rows will not be changed too.
+This update is critical for new plugin users only.
+Note to former users: if you wish to rebuild all your dummy SIG index.php files you need to delete that files manually before click "Rebuild All" button. As old index.php file does not contain SIG Guard stamp string, plugin should not update such file.
 
 = 1.3 =
 * 12.04.2010
