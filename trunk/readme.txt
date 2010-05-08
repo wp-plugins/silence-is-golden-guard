@@ -28,7 +28,7 @@ Redirect to the site root option is available.
 To read more about 'Silence is Golden Guard' visit this link http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin
 
 
-<strong>Attention!</strong> In rare cases (4 users reported this problem) activation of this plugin can block the site with so-called redirection loop. Important index.php file can be rewritten by SIG plugin due to difficult catching bug exists. For this time I can't repeat and reproduce such situation neither at my test environment nor at the working site. Yes, shinephp.com uses SIG plugin.
+<strong>Attention!</strong> In rare cases (4 users reported this problem) activation of this plugin can block the site with so-called redirection loop. Important index.php file can be rewritten by SIG plugin due to difficult catching bug exists. For this time I can't repeat and reproduce such situation neither at my test environment nor at the working site. Yes, (shinephp.com)[http://shinephp.com] uses SIG plugin.
 <strong>There is a very strong recommendation to make full backup of your blog before you activate SIG plugin.</strong> If you have developement copy of your blog at the same webhost I recommend you to give a SIG plugin first try at the test environment.
 
 == Installation ==
