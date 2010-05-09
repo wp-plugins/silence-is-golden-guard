@@ -44,7 +44,7 @@ Installation procedure:
 To resolve this SIG plugins checks from v. 1.5 if WP Super Cache plugin is active, and in this case creates the empty index.php file in the wp-super-cache/plugins/ folder, that is SIG ignores redirection option for this folder.
 Problem could be left if WP Super Cache is placed under another path, and WP Super Cache plugin root folder name differs from the default one "wp-super-cache".
 To resolve endless redirection loop problem remove the 'header("Location: http://www...' line from wp-super-cache/plugins/index.php file. It will resolve your problem with the high level of probability.
-If you can not resolve the problem yourself left a comment at <a href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/">SIG plugin page<a> and I will try to help you.
+If you can not resolve the problem yourself left a comment at <a href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/">SIG plugin page</a> and I will try to help you.
 
 
 == Screenshots ==
