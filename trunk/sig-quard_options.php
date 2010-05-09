@@ -184,6 +184,16 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
             <?php _e('If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name="generator" content="WordPress 2.9.2"/&gt; from your blog pages','sig_guard'); ?>
           </td>
         </tr>
+        <tr>
+          <td style="vertical-align:top;">
+            <input type="checkbox" value="1" <?php echo sig_guard_optionChecked($sig_guard_log_errors, 1); ?>
+                   name="sig_guard_log_errors" id="sig_guard_hide_log_errors" />
+            <label for="sig_guard_log_errors"><?php _e('Log errors to .log file','sig-guard'); ?></label>
+          </td>
+          <td>
+            <?php _e('If it is checked, plugin will write information about any errors during scan process to .log file in SIG plugin directory','sig_guard'); ?>
+          </td>
+        </tr>
       </table>
       <span style="color: green;">Note: Save your changes in options by press "Update" button before take any Rebuild or Scan actions.</span>
 			<?php sig_guard_displayBoxEnd();?>

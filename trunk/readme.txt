@@ -4,7 +4,7 @@ Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 2.8
 Tested up to: 3.0
-Stable tag: 1.4
+Stable tag: 1.5
 
 Silence is Golden Guard WordPress plugin prevents your blog directories from listing with redirect to home page, removes unused files from plugin folders, which could expose plugin versions to attacker.
 
@@ -18,17 +18,15 @@ The checking are:
 backup copy and adds Options -Indexes line into .htaccess file in the WordPress
 root directory.
 * Plugin can check if empty index.php file exists in the every directory. If index.php file doesn't exist,
-plugin creates one with comments line only 'Silence is golden' exactly as WordPress does.
-This check and fix are useful as many plugin author do not put index.php files into their plugin directories.
-Redirect to the site root option is available.
+plugin creates one with comments line 'Silence is golden' as WordPress does.
+This check and fix are useful as many plugin authors do not put index.php files into their plugin directories.
+Redirect to the site root option from index.php call is available.
 * Other functions:
-* remove unused files (readme.txt, screenshot-*.*)  from plugin folders, which could expose plugin versions to attacker.
+* remove unused files (readme.txt, screenshot-*.*)  from plugins folders, which could expose plugin versions to attacker.
 * remove WordPress version information from blog pages.
 
 To read more about 'Silence is Golden Guard' visit this link http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin
 
-
-<strong>Attention!</strong> In rare cases (4 users reported this problem) activation of this plugin can block the site with so-called redirection loop. Important index.php file can be rewritten by SIG plugin due to difficult catching bug exists. For this time I can't repeat and reproduce such situation neither at my test environment nor at the working site. Yes, http://shinephp.com uses SIG plugin.
 <strong>There is a very strong recommendation to make full backup of your blog before you activate SIG plugin.</strong> If you have developement copy of your blog at the same webhost I recommend you to give a SIG plugin first try at the test environment.
 
 == Installation ==
@@ -41,7 +39,12 @@ Installation procedure:
 4. Go to the "Settings"-"SIG Guard" menu item and check/change your preferences to customize how this plugin will work for you.
 
 == Frequently Asked Questions ==
-- coming soon with your help
+* I activated Silence is Golden plugin and click Scan button. Now I have not access to my site, neither front-end, nor admin back-end. FireFox writes "Firefox has detected that the server is redirecting the request for this address in a way that will never complete." What is happend and how to fix it?
+* This problem could be met if you use WP Super Cache plugin and turned on the redirection to site root option for SIG plugin. If you put index.php file with redirection to root directive into wp-super-cache/plugins/ folder you will get exactly that problem as it is described above.
+To resolve this SIG plugins checks from v. 1.5 if WP Super Cache plugin is active, and in this case creates the empty index.php file in the wp-super-cache/plugins/ folder, that is SIG ignores redirection option for this folder.
+Problem could be left if WP Super Cache is placed under another path, and WP Super Cache plugin root folder name differs from the default one "wp-super-cache".
+To resolve endless redirection loop problem remove the 'header("Location: http://www...' line from wp-super-cache/plugins/index.php file. It will resolve your problem with the high level of probability.
+If you can not resolve the problem yourself left a comment at <a href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/">SIG plugin page<a> and I will try to help you.
 
 
 == Screenshots ==
@@ -60,6 +63,10 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
 
 == Changelog ==
+= 1.5 =
+* 09.05.2010
+* Endless redirection loop problem for blogs with active WP Super Cache plugin is resolved. See <a href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/#faq">FAQ</a> section for more details.
+* Event log file is created only if correspondent option is turned on at the Settings page.
 
 = 1.4 =
 * 05.05.2010

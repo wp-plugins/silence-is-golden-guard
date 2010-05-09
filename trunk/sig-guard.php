@@ -3,7 +3,7 @@
 Plugin Name: Silence Is Golden Guard
 Plugin URI: http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/
 Description: It prevents your blog directories from full file listing if visitor types just directory name as the URL, e.g. http://yourdomain/wp-content/plugins/
-Version: 1.4
+Version: 1.5
 Author: Vladimir Garagulya
 Author URI: http://www.shinephp.com
 Text Domain: sig-guard
@@ -65,7 +65,7 @@ function sig_guard_optionsPage() {
   $sig_guard_delete_screenshot = get_option('sig_guard_delete_screenshot');
   $sig_guard_redirect_tohomepage = get_option('sig_guard_redirect_tohomepage');
   $sig_guard_hide_wordpress_version = get_option('sig_guard_hide_wordpress_version');
-  
+  $sig_guard_log_errors = get_option('sig_guard_log_errors');
 ?>
 
 <div class="wrap">
@@ -92,6 +92,7 @@ function sig_guard_install() {
   add_option('sig_guard_delete_screenshot', 0);
   add_option('sig_guard_redirect_tohomepage', 0);
   add_option('sig_guard_hide_wordpress_version', 0);
+  add_option('sig_guard_log_errors', 0);
   $logFileName = SIG_GUARD_PLUGIN_DIR.SIG_GUARD_DIR_SLASH.'sig-guard.log';
   if (SIG_WINDOWS_SERVER) {
     $logFileName = str_replace('/', SIG_GUARD_DIR_SLASH, $logFileName);
@@ -99,7 +100,7 @@ function sig_guard_install() {
   if (file_exists($logFileName)) {
     sig_fileRemove($logFileName);
   }
-  sig_guard_logEvent('SIG Guard Plugin is installed successfully.');
+  
 }
 // end of sig_guard_install()
 
@@ -116,6 +117,7 @@ function sig_guard_init() {
     register_setting('sig-quard-options', 'sig_guard_delete_screenshot');
     register_setting('sig-quard-options', 'sig_guard_redirect_tohomepage');
     register_setting('sig-quard-options', 'sig_guard_hide_wordpress_version');
+    register_setting('sig-quard-options', 'sig_guard_log_errors');
   }
 }
 // end of sig_guard_init()
