@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Silence Is Golden Guard Plugin 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-11 22:16+0600\n"
+"POT-Creation-Date: 2010-05-09 15:08+0600\n"
 "PO-Revision-Date: \n"
 "Last-Translator: vladimir <vladimir@shinephp.com>\n"
 "Language-Team: Whiler <webmaster@blogs.wittwer.fr>\n"
@@ -24,89 +24,89 @@ msgstr "Veuillez mettre à jour !"
 msgid "Silence Is Golden Guard Plugin"
 msgstr "Extension Silence is Golden Guard"
 
-#: ../sig-guard.php:120
+#: ../sig-guard.php:128
 #: ../sig-quard_options.php:83
 msgid "Settings"
 msgstr "Réglages"
 
-#: ../sig-guard.php:130
+#: ../sig-guard.php:138
 #: ../sig-quard_options.php:49
 msgid "Changelog"
 msgstr "Révisions"
 
-#: ../sig-guard_lib.php:117
-#: ../sig-guard_lib.php:171
-#: ../sig-guard_lib.php:271
+#: ../sig-guard_lib.php:125
+#: ../sig-guard_lib.php:179
+#: ../sig-guard_lib.php:280
 msgid "file open error"
 msgstr "Erreur lors de l'ouverture du fichier"
 
-#: ../sig-guard_lib.php:127
+#: ../sig-guard_lib.php:135
 msgid "file read error"
 msgstr "Erreur lors de la lecture du fichier"
 
-#: ../sig-guard_lib.php:140
-#: ../sig-guard_lib.php:203
-#: ../sig-guard_lib.php:313
+#: ../sig-guard_lib.php:148
+#: ../sig-guard_lib.php:211
+#: ../sig-guard_lib.php:335
 msgid "file close error"
 msgstr "Erreur lors de la fermeture du fichier"
 
-#: ../sig-guard_lib.php:151
+#: ../sig-guard_lib.php:159
 msgid "file backup copy error"
 msgstr "Erreur lors de la copie de sauvegarde"
 
-#: ../sig-guard_lib.php:159
-#: ../sig-guard_lib.php:211
+#: ../sig-guard_lib.php:167
+#: ../sig-guard_lib.php:219
 msgid "file permissions change error"
 msgstr "Erreur lors du changement de permission du fichier"
 
-#: ../sig-guard_lib.php:179
 #: ../sig-guard_lib.php:187
 #: ../sig-guard_lib.php:195
-#: ../sig-guard_lib.php:304
+#: ../sig-guard_lib.php:203
+#: ../sig-guard_lib.php:326
 msgid "file write error"
 msgstr "Erreur lors de l'écriture du fichier"
 
-#: ../sig-guard_lib.php:219
+#: ../sig-guard_lib.php:227
 msgid "is modified"
 msgstr "est modifié"
 
-#: ../sig-guard_lib.php:229
-#: ../sig-guard_lib.php:321
+#: ../sig-guard_lib.php:237
+#: ../sig-guard_lib.php:343
 msgid "permissions change error"
 msgstr "Erreur de changement de permission"
 
-#: ../sig-guard_lib.php:246
+#: ../sig-guard_lib.php:255
 msgid "file delete error"
 msgstr ""
 
-#: ../sig-guard_lib.php:296
+#: ../sig-guard_lib.php:310
 msgid "file create error"
 msgstr "Erreur lors de la création du fichier"
 
-#: ../sig-guard_lib.php:330
+#: ../sig-guard_lib.php:352
 msgid "file is created"
 msgstr "Le fichier a été créé"
 
-#: ../sig-guard_lib.php:353
-#: ../sig-guard_lib.php:394
+#: ../sig-guard_lib.php:375
+#: ../sig-guard_lib.php:416
 msgid "is deleted"
 msgstr ""
 
-#: ../sig-guard_lib.php:482
+#: ../sig-guard_lib.php:506
 msgid "\"Silence is Golden\" scan is finished:"
 msgstr "Le scan \"Silence is Golden\" est terminé&nbsp;:"
 
-#: ../sig-guard_lib.php:483
+#: ../sig-guard_lib.php:507
 #, php-format
 msgid "%s index.php files are created"
 msgstr " %s index.php fichiers sont créés"
 
-#: ../sig-guard_lib.php:484
+#: ../sig-guard_lib.php:508
 #, php-format
 msgid "%s unused files are deleted"
 msgstr ""
 
-#: ../sig-guard_lib.php:485
+#: ../sig-guard_lib.php:509
 msgid "Return back to SIG Guard Settings Page"
 msgstr "Retour à la SIG Guard page de configuration"
 
@@ -224,26 +224,34 @@ msgid "If it is checked, plugin will remove WordPress version information, e.g. 
 msgstr ""
 
 #: ../sig-quard_options.php:191
+msgid "Log errors to .log file"
+msgstr ""
+
+#: ../sig-quard_options.php:194
+msgid "If it is checked, plugin will write information about any errors during scan process to .log file in SIG plugin directory"
+msgstr ""
+
+#: ../sig-quard_options.php:201
 msgid "Update"
 msgstr "Enregistrer les modifications"
 
-#: ../sig-quard_options.php:191
+#: ../sig-quard_options.php:201
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
-#: ../sig-quard_options.php:192
+#: ../sig-quard_options.php:202
 msgid "Cancel"
 msgstr "Annuler"
 
-#: ../sig-quard_options.php:192
+#: ../sig-quard_options.php:202
 msgid "Cancel not saved changes"
 msgstr "Annuler ne sauvegarde pas les changements"
 
-#: ../sig-quard_options.php:193
+#: ../sig-quard_options.php:203
 msgid "Scan Now"
 msgstr "Vérifier maintenant"
 
-#: ../sig-quard_options.php:193
+#: ../sig-quard_options.php:203
 #, fuzzy
 msgid "Scan and Fix directories, plugins version listing related problems Now"
 msgstr "Vérifie et fixe les problèmes liés à l'exploration des répertoires Maintenant"

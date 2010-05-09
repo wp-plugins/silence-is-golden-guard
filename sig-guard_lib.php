@@ -43,8 +43,15 @@ if(strpos($tmp, '/', 0)!==false) {
 define('SIG_FAILURE_MESS', ' <span style="color: red;font-weight: bold;">:(</span><br/>');
 define('SIG_SUCCESS_MESS', ' <span style="color: green;font-weight: bold;">OK</span><br/>');
 
+$sig_guard_log_errors = get_option('sig_guard_log_errors');
+
 
 function sig_guard_logEvent($message) {
+  global $sig_guard_log_errors;
+  if (!$sig_guard_log_errors) {
+    return;
+  }
+
   include(ABSPATH .'wp-includes/version.php');
 
   $fileName = SIG_GUARD_PLUGIN_DIR.'/sig-quard-'.md5(WP_PLUGIN_DIR).'.log';
@@ -307,6 +314,14 @@ function sig_indexFileCheck($indexFile, $sig_mess, $rebuildIndexFile, $screenLog
     }
     return false;
   }
+
+// WP Super Cache compatability issue fix: redirection directive in /wp-super-cache/plugins/index.php file leads to endless redirection loop, so it should be excluded
+  if (defined('WPCACHEHOME')) {
+    if (strpos($indexFile, 'wp-super-cache'.SIG_GUARD_DIR_SLASH.'plugins'.SIG_GUARD_DIR_SLASH)!==false) {
+      $sig_mess = "<?php\r\n".SIG_GUARD_PLUGIN_STAMP."\r\n?>";
+    }
+  }
+
   if (!fwrite($fh, $sig_mess)) {
     $errMess = $indexFile.' '.__('file write error');
     sig_guard_logEvent($errMess);
