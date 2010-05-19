@@ -163,7 +163,7 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
             <label for="sig_guard_delete_screenshot"><?php _e('Delete screenshot files','sig-guard'); ?></label>
           </td>
           <td>
-            <?php _e('If it is checked, plugin will delete unused screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg) from every plugin folder','sug-guard'); ?>
+            <?php _e('If it is checked, plugin will delete unused screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg) from every plugin folder','sig-guard'); ?>
           </td>
         </tr>
         <tr>
@@ -182,7 +182,7 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
             <label for="sig_guard_hide_wordpress_version"><?php _e('Hide WordPress version','sig-guard'); ?></label>
           </td>
           <td>
-            <?php _e('If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name="generator" content="WordPress 2.9.2"/&gt; from your blog pages','sig_guard'); ?>
+            <?php _e('If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name="generator" content="WordPress 2.9.2"/&gt; from your blog pages','sig-guard'); ?>
           </td>
         </tr>
         <tr>
@@ -192,7 +192,7 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
             <label for="sig_guard_log_errors"><?php _e('Log errors to .log file','sig-guard'); ?></label>
           </td>
           <td>
-            <?php _e('If it is checked, plugin will write information about any errors during scan process to .log file in SIG plugin directory','sig_guard'); ?>
+            <?php _e('If it is checked, plugin will write information about any errors during scan process to .log file in SIG plugin directory','sig-guard'); ?>
           </td>
         </tr>
       </table>
