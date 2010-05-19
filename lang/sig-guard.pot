@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Silence is Golden Guard 1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-09 15:08+0600\n"
+"POT-Creation-Date: 2010-05-19 20:57+0600\n"
 "PO-Revision-Date: \n"
 "Last-Translator: vladimir <vladimir@shinephp.com>\n"
 "Language-Team: ShinePHP.com <vladimir@shinephp.com>\n"
@@ -29,7 +29,7 @@ msgid "Silence Is Golden Guard Plugin"
 msgstr ""
 
 #: ../sig-guard.php:128
-#: ../sig-quard_options.php:83
+#: ../sig-quard_options.php:84
 msgid "Settings"
 msgstr ""
 
@@ -147,112 +147,120 @@ msgid "for the help with French translation"
 msgstr ""
 
 #: ../sig-quard_options.php:56
-msgid "for the help with Spanish translation"
+msgid "for the help with German translation"
 msgstr ""
 
 #: ../sig-quard_options.php:57
+msgid "for the help with Spanish translation"
+msgstr ""
+
+#: ../sig-quard_options.php:58
 msgid "Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated."
 msgstr ""
 
-#: ../sig-quard_options.php:89
+#: ../sig-quard_options.php:90
 msgid "Does not create index.php file in the checked folders"
 msgstr ""
 
-#: ../sig-quard_options.php:90
+#: ../sig-quard_options.php:91
 msgid "Exclude Folders"
 msgstr ""
 
-#: ../sig-quard_options.php:94
+#: ../sig-quard_options.php:95
 msgid "Checked folders are fully excluded from SIG Guard plugin activity"
 msgstr ""
 
-#: ../sig-quard_options.php:129
+#: ../sig-quard_options.php:130
 msgid "index.php Redirect"
 msgstr ""
 
-#: ../sig-quard_options.php:131
+#: ../sig-quard_options.php:132
 msgid "Rebuild All"
 msgstr ""
 
-#: ../sig-quard_options.php:131
+#: ../sig-quard_options.php:132
 msgid "Rebuild All subfolder index.php files. It is useful if you changed redirection option above."
 msgstr ""
 
-#: ../sig-quard_options.php:135
+#: ../sig-quard_options.php:136
 msgid "If it does not checked, subfolder index.php will show empty page only. If it is checked, any request for subfolder content listing will be redirected to your blog root"
 msgstr ""
 
-#: ../sig-quard_options.php:141
+#: ../sig-quard_options.php:142
 msgid "Modify Apache .htaccess"
 msgstr ""
 
-#: ../sig-quard_options.php:144
+#: ../sig-quard_options.php:145
 msgid ""
 "Modify Apache .htaccess file in the site root folder. Add \"Options -Indexes\" line to prevent directory listing by Apache Web server.\n"
 "                      If it is turned on (+Indexes) or absent, then if a URL which maps to a directory is requested, and there is no DirectoryIndex (e.g., index.html or index.php) file in that directory, then Web server will return a formatted listing of the directory."
 msgstr ""
 
-#: ../sig-quard_options.php:152
+#: ../sig-quard_options.php:153
 msgid "Delete readme.txt"
 msgstr ""
 
-#: ../sig-quard_options.php:155
+#: ../sig-quard_options.php:156
 msgid "If it is checked, plugin will delete unused readme.txt, documentation.txt, changelog.txt files from every plugin folder"
 msgstr ""
 
-#: ../sig-quard_options.php:162
+#: ../sig-quard_options.php:163
 msgid "Delete screenshot files"
 msgstr ""
 
-#: ../sig-quard_options.php:165
+#: ../sig-quard_options.php:166
 msgid "If it is checked, plugin will delete unused screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg) from every plugin folder"
 msgstr ""
 
-#: ../sig-quard_options.php:171
+#: ../sig-quard_options.php:172
 msgid "Auto Monitor"
 msgstr ""
 
-#: ../sig-quard_options.php:174
+#: ../sig-quard_options.php:175
 msgid "Check folders state automatically once a day"
 msgstr ""
 
-#: ../sig-quard_options.php:181
+#: ../sig-quard_options.php:182
 msgid "Hide WordPress version"
 msgstr ""
 
-#: ../sig-quard_options.php:184
+#: ../sig-quard_options.php:185
 msgid "If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name=\"generator\" content=\"WordPress 2.9.2\"/&gt; from your blog pages"
 msgstr ""
 
-#: ../sig-quard_options.php:191
+#: ../sig-quard_options.php:192
 msgid "Log errors to .log file"
 msgstr ""
 
-#: ../sig-quard_options.php:194
+#: ../sig-quard_options.php:195
 msgid "If it is checked, plugin will write information about any errors during scan process to .log file in SIG plugin directory"
 msgstr ""
 
-#: ../sig-quard_options.php:201
+#: ../sig-quard_options.php:199
+msgid "Note: Save your changes in options by press \"Update\" button before take any Rebuild or Scan actions."
+msgstr ""
+
+#: ../sig-quard_options.php:202
 msgid "Update"
 msgstr ""
 
-#: ../sig-quard_options.php:201
+#: ../sig-quard_options.php:202
 msgid "Save Changes"
 msgstr ""
 
-#: ../sig-quard_options.php:202
+#: ../sig-quard_options.php:203
 msgid "Cancel"
 msgstr ""
 
-#: ../sig-quard_options.php:202
+#: ../sig-quard_options.php:203
 msgid "Cancel not saved changes"
 msgstr ""
 
-#: ../sig-quard_options.php:203
+#: ../sig-quard_options.php:204
 msgid "Scan Now"
 msgstr ""
 
-#: ../sig-quard_options.php:203
+#: ../sig-quard_options.php:204
 msgid "Scan and Fix directories, plugins version listing related problems Now"
 msgstr ""
 

@@ -3,7 +3,7 @@
 Plugin Name: Silence Is Golden Guard
 Plugin URI: http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/
 Description: It prevents your blog directories from full file listing if visitor types just directory name as the URL, e.g. http://yourdomain/wp-content/plugins/
-Version: 1.5
+Version: 1.6
 Author: Vladimir Garagulya
 Author URI: http://www.shinephp.com
 Text Domain: sig-guard

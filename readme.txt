@@ -4,7 +4,7 @@ Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 2.8
 Tested up to: 3.0
-Stable tag: 1.5
+Stable tag: 1.6
 
 Silence is Golden Guard WordPress plugin prevents your blog directories from listing with redirect to home page, removes unused files from plugin folders, which could expose plugin versions to attacker.
 
@@ -25,9 +25,20 @@ Redirect to the site root option from index.php call is available.
 * remove unused files (readme.txt, screenshot-*.*)  from plugins folders, which could expose plugin versions to attacker.
 * remove WordPress version information from blog pages.
 
+== Translations ==
+* French: [Whiler](http://blogs.wittwer.fr/whiler/)
+* German: [Tom](http://cash-india.info)
+* Russian: [Vladimir](http://shinephp.com)
+* Spanish: [Omi](http://equipajedemano.info)
+
+Dear plugin User,
+if you wish to help me with this plugin translation I very appreciate it. Please send your language .po and .mo files to vladimir[at-sign]shinephp.com email. Do not forget include your site link in order I can show it with greetings for the translation help at shinephp.com, plugin settings page and in this readme.txt file.
+
+
 To read more about 'Silence is Golden Guard' visit this link http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin
 
 <strong>There is a very strong recommendation to make full backup of your blog before you activate SIG plugin.</strong> If you have developement copy of your blog at the same webhost I recommend you to give a SIG plugin first try at the test environment.
+
 
 == Installation ==
 
@@ -51,18 +62,17 @@ If you can not resolve the problem yourself left a comment at <a href="http://ww
 1. screenshot-1.png Silence is Golden Guard plugin Settings page
 2. screenshot-2.png SIG Guard plugin Scan results
 
-== Translations ==
-* French: [Whiler](http://blogs.wittwer.fr/whiler/)
-* Russian: [Vladimir](http://shinephp.com)
-* Spanish: [Omi](http://equipajedemano.info)
-
-Dear plugin User,
-if you wish to help me with this plugin translation I very appreciate it. Please send your language .po and .mo files to vladimir[at-sign]shinephp.com email. Do not forget include your site link in order I can show it with greetings for the translation help at shinephp.com, plugin settings page and in this readme.txt file.
 
 == Special Thanks to ==
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
 
+
 == Changelog ==
+= 1.6 =
+* 19.05.2010
+* German translation is added.
+* Minor bugs with usage of translation text-domain are fixed.
+
 = 1.5 =
 * 09.05.2010
 * Endless redirection loop problem for blogs with active WP Super Cache plugin is resolved. See <a href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/#faq">FAQ</a> section for more details.

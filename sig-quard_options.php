@@ -53,7 +53,8 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
 									<?php sig_guard_displayBoxStart(__('Greetings:','sig-guard')); ?>
 											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo $shinephpFavIcon; ?>);" target="_blank" title="<?php _e("It's me, the author", 'sig-guard'); ?>" href="http://www.shinephp.com/">Vladimir</a>
                       <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/whiler.png'; ?>);" target="_blank" title="<?php _e('for the help with French translation', 'sig-guard'); ?>" href="http://blogs.wittwer.fr/whiler/">Whiler</a>
-                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/omi.png'; ?>);" target="_blank" title="<?php _e('for the help with Spanish translation', 'thankyou'); ?>" href="http://equipajedemano.info/">Omi</a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/tom.png'; ?>);" target="_blank" title="<?php _e('for the help with German translation', 'sig-guard'); ?>" href="http://cash-india.info">Tom</a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/omi.png'; ?>);" target="_blank" title="<?php _e('for the help with Spanish translation', 'sig-guard'); ?>" href="http://equipajedemano.info">Omi</a>
 											<?php _e('Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated.', 'sig-guard'); ?>
 									<?php sig_guard_displayBoxEnd(); ?>
 						</div>
@@ -86,7 +87,7 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
             <td style="vertical-align:top;width:200px;">
               <input type="checkbox" value="1" <?php echo sig_guard_optionChecked($sig_guard_exclude_folders, 1); ?>
                        name="sig_guard_exclude_folders" id="sig_guard_exclude_folders" onclick="sig_guard_hideShowDiv(this)"
-                       title="<?php _e('Does not create index.php file in the checked folders'); ?>"/>
+                       title="<?php _e('Does not create index.php file in the checked folders','sig-guard'); ?>"/>
 	             <label for="sig_guard_exclude_folders"><?php _e('Exclude Folders','sig-guard'); ?></label>
             </td>
             <td>                      
@@ -171,7 +172,7 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
             <label for="sig_guard_auto_monitor"><?php _e('Auto Monitor','sig-guard'); ?></label>
           </td>
           <td class="submit">
-            <?php _e('Check folders state automatically once a day'); ?>
+            <?php _e('Check folders state automatically once a day','sig-guard'); ?>
           </td>
         </tr>
         <tr>
@@ -195,7 +196,7 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
           </td>
         </tr>
       </table>
-      <span style="color: green;">Note: Save your changes in options by press "Update" button before take any Rebuild or Scan actions.</span>
+      <span style="color: green;"><?php _e('Note: Save your changes in options by press "Update" button before take any Rebuild or Scan actions.','sig-guard'); ?></span>
 			<?php sig_guard_displayBoxEnd();?>
       <div class="fli submit" style="padding-top: 0px;">
           <input type="submit" name="submit" value="<?php _e('Update', 'sig-guard'); ?>" title="<?php _e('Save Changes', 'sig-guard'); ?>" />
