@@ -1,5 +1,5 @@
 === Silence is Golden Guard ===
-Contributors: ShinePHP
+Contributors: shinephp
 Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 2.8
