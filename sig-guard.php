@@ -3,7 +3,7 @@
 Plugin Name: Silence Is Golden Guard
 Plugin URI: http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/
 Description: It prevents your blog directories from full file listing if visitor types just directory name as the URL, e.g. http://yourdomain/wp-content/plugins/
-Version: 1.6
+Version: 1.7
 Author: Vladimir Garagulya
 Author URI: http://www.shinephp.com
 Text Domain: sig-guard
@@ -35,9 +35,9 @@ if (!function_exists("get_option")) {
 
 global $wp_version;
 
-$exit_msg = __('Silence is Golden Guard requires WordPress 2.8 or newer.').'<a href="http://codex.wordpress.org/Upgrading_WordPress">'.__('Please update!').'</a>';
+$exit_msg = __('Silence is Golden Guard requires WordPress 3.0 or newer.').'<a href="http://codex.wordpress.org/Upgrading_WordPress">'.__('Please update!').'</a>';
 
-if (version_compare($wp_version,"2.8","<"))
+if (version_compare($wp_version,"3.0","<"))
 {
 	return ($exit_msg);
 }
@@ -143,7 +143,7 @@ function sig_guard_plugin_row_meta($links, $file) {
 
 function sig_guard_settings_menu() {
 	if ( function_exists('add_options_page') ) {
-    $sig_guard_page = add_options_page('Silence Is Golden Guard', 'SIG Guard', 9, basename(__FILE__), 'sig_guard_optionsPage');
+    $sig_guard_page = add_options_page('Silence Is Golden Guard', 'SIG Guard', 'create_users', basename(__FILE__), 'sig_guard_optionsPage');
 		add_action( "admin_print_styles-$sig_guard_page", 'sig_guard_adminCssAction' );
 	}
 }

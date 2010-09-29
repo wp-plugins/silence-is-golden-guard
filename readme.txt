@@ -2,9 +2,9 @@
 Contributors: shinephp
 Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
-Requires at least: 2.8
-Tested up to: 3.0
-Stable tag: 1.6
+Requires at least: 3.0
+Tested up to: 3.0.1
+Stable tag: 1.7
 
 It prevents your blog directories from listing requests with redirect to home page, removes unused txt, screenshot files from plugins directories.
 
@@ -32,7 +32,7 @@ You can find more infomation here at <a href="http://shinephp.com/silence-is-gol
 == Installation ==
 
 Installation procedure:
-
+Attention! Starting from version 1.7 plugin works with WordPress 3.0 and higher only. For earlier WordPress versions use plugin version 1.6 from http://downloads.wordpress.org/plugin/silence-is-golden-guard.1.6.zip
 1. Deactivate plugin if you have the previous version installed. (It is important requirement for switching to this version from a previous one.)
 2. Extract "silence-is-golden-guard.x.x.x.zip" archive content to the "/wp-content/plugins/silence-is-golden-guard" directory.
 3. Activate "Silence is Golden Guard" plugin via 'Plugins' menu in WordPress admin menu. 
@@ -58,6 +58,7 @@ You are welcome! Help me with plugin translation, share with me new ideas about 
 == Translations ==
 * French: [Whiler](http://blogs.wittwer.fr/whiler/)
 * German: [Tom](http://cash-india.info)
+* Italian: [Alessandro Mariani](http://technodin.org)
 * Russian: [Vladimir](http://shinephp.com)
 * Spanish: [Omi](http://equipajedemano.info)
 
@@ -66,6 +67,11 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 
 
 == Changelog ==
+= 1.7 =
+* 29.30.2010
+* Italian translation is added.
+* Technical update for WordPress 3.0 full compatibility. Staff deprecated since WordPress v.3.0 is excluded.
+
 = 1.6 =
 * 19.05.2010
 * German translation is added.
