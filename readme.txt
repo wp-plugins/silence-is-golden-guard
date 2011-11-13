@@ -3,8 +3,8 @@ Contributors: shinephp
 Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 3.0
-Tested up to: 3.0.1
-Stable tag: 1.7
+Tested up to: 3.3
+Stable tag: 1.8
 
 It prevents your blog directories from listing requests with redirect to home page, removes unused txt, screenshot files from plugins directories.
 
@@ -26,7 +26,8 @@ Redirect to the site root option from index.php call is available.
 * remove WordPress version information from blog pages.
 You can find more infomation here at <a href="http://shinephp.com/silence-is-golden-guard-wordpress-plugin/" rel="nofollow">shinephp.com</a>
 
-<strong>There is a very strong recommendation to make full backup of your blog before you activate SIG plugin.</strong> If you have developement copy of your blog at the same webhost I recommend you to give a SIG plugin first try at the test environment.
+<strong>There is a very strong recommendation to make full backup of your blog before you activate SIG plugin.</strong> If you have development copy of your blog at the same webhost I recommend you to give a SIG plugin first try at the test environment as there are small amount of incidents when with redirection to site root option turned on automatically created empty index.php file caused endless redirect loop and prevents site loading.
+It could be the case if you use child theme and theme_name-child folder has not its own index.php file and some other cases which are not isolated yet. 
 
 
 == Installation ==
@@ -56,6 +57,7 @@ If you can not resolve the problem yourself left a comment at <a href="http://ww
 You are welcome! Help me with plugin translation, share with me new ideas about it further development and link to your site will appear here.
 
 == Translations ==
+* Arabic: [mr.Ahmad](http://egylovers.com)
 * French: [Whiler](http://blogs.wittwer.fr/whiler/)
 * German: [Tom](http://cash-india.info)
 * Italian: [Alessandro Mariani](http://technodin.org)
@@ -67,6 +69,11 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 
 
 == Changelog ==
+= 1.8 =
+* 12.11.2011
+* Arabic translation is added.
+* ShinePHP.com News section is removed from plugin's Settings page.
+
 = 1.7 =
 * 29.30.2010
 * Italian translation is added.

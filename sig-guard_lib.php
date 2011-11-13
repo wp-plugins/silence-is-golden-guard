@@ -515,40 +515,4 @@ function sig_guard_Scan($screenLog = false, $rebuildIndexFile = false) {
 // end of sig_guard_Scan()
 
 
-function sig_guard_shinephpNews() {
-
-$feed = new SimplePie();
-$feed->set_feed_url('http://www.shinephp.com/category/shinephp-wordpress-plugins/feed/');
-$feed->enable_cache(false);
-$feed->init();
-$feed->handle_content_type();
-$items = $feed->get_items();
-if ($items && sizeof($items)>0) {
-  echo '<ul>';
-  foreach ($items as $item) {
-    echo '<li><a href="'.$item->get_permalink().'">'.$item->get_title().'</a></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '<ul><li>'.__('No items found.', 'thankyou') . '</li></ul>';
-}
-echo '<hr/>';
-echo '<span style="font-size: 12px; font-weight: bold;">'.__('Recent Posts:','plugins-lang-switch').'</span><br/>';
-$feed->set_feed_url('http://feeds.feedburner.com/shinephp');
-$feed->init();
-$feed->handle_content_type();
-$items = $feed->get_items();
-if ($items && sizeof($items)>0) {
-  echo '<ul>';
-  foreach ($items as $item) {
-    echo '<li><a href="'.$item->get_permalink().'" title="'.substr($item->get_description(), 0, 80).'">'.$item->get_title().'</a>&nbsp;&ndash; <span class="rss-date">'.$item->get_date('j F Y').'</span></li>';
-  }
-  echo '</ul>';
-} else {
-  echo '<ul><li>'.__('No items found.', 'thankyou') . '</li></ul>';
-}
-
-}
-// end of sig_guard_shinephpNews()
-
 ?>

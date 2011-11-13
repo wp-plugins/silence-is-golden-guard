@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Silence is Golden Guard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-29 23:25+0700\n"
+"POT-Creation-Date: 2011-11-13 23:00+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Vladimir <vladimir@shinephp.com>\n"
 "Language-Team: Tom <office@estreetbeat.com>\n"
@@ -42,75 +42,76 @@ msgid "Donate"
 msgstr "Spende"
 
 #: ../sig-quard_options.php:54
-msgid "More plugins from"
-msgstr ""
-
-#: ../sig-quard_options.php:57
 msgid "Greetings:"
 msgstr "Gruesse:"
 
-#: ../sig-quard_options.php:58
+#: ../sig-quard_options.php:55
 msgid "It's me, the author"
 msgstr "Das bin ich, der Autor"
 
-#: ../sig-quard_options.php:59
+#: ../sig-quard_options.php:56
+msgid "for the help with Arabic translation"
+msgstr ""
+
+#: ../sig-quard_options.php:57
 msgid "for the help with French translation"
 msgstr "fuer die Hilfe bei der franzoesischen Uebersetzung"
 
-#: ../sig-quard_options.php:60
+#: ../sig-quard_options.php:58
 msgid "for the help with German translation"
 msgstr "fuer die Hilfe bei der deutschen Uebersetzung"
 
-#: ../sig-quard_options.php:61
+#: ../sig-quard_options.php:59
+#, fuzzy
 msgid "For the help with Italian translation"
 msgstr ""
 
-#: ../sig-quard_options.php:62
+#: ../sig-quard_options.php:60
 msgid "for the help with Spanish translation"
 msgstr "fuer die Hilfe bei der spanischen Uebersetzung"
 
-#: ../sig-quard_options.php:63
+#: ../sig-quard_options.php:61
 msgid "Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated."
 msgstr "Moechtest du deinen Namen und einen Link hier gepostet haben? Es wuerde uns freuen, wenn du uns bei der Uebersetzung hilfst und neue Ideen einbringen kannst."
 
-#: ../sig-quard_options.php:89
+#: ../sig-quard_options.php:87
 #: ../sig-guard.php:128
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: ../sig-quard_options.php:95
+#: ../sig-quard_options.php:93
 msgid "Does not create index.php file in the checked folders"
 msgstr "Erstelle keine index.php Datei in den markierten Ordern"
 
-#: ../sig-quard_options.php:96
+#: ../sig-quard_options.php:94
 msgid "Exclude Folders"
 msgstr "Ausschliessende Ordner"
 
-#: ../sig-quard_options.php:100
+#: ../sig-quard_options.php:98
 msgid "Checked folders are fully excluded from SIG Guard plugin activity"
 msgstr "Ausgewaehlte Ordner sind vollstaendig ausgenommen vom SIG Guard Plugin."
 
-#: ../sig-quard_options.php:135
+#: ../sig-quard_options.php:133
 msgid "index.php Redirect"
 msgstr "index.php Weiterleitung"
 
-#: ../sig-quard_options.php:137
+#: ../sig-quard_options.php:135
 msgid "Rebuild All"
 msgstr "Erneuere alle"
 
-#: ../sig-quard_options.php:137
+#: ../sig-quard_options.php:135
 msgid "Rebuild All subfolder index.php files. It is useful if you changed redirection option above."
 msgstr "Erstelle in allen Unterordnern eine index.php Datein. Dies ist nuetzlich, wenn die Umleitungsoption veraendert wurde."
 
-#: ../sig-quard_options.php:141
+#: ../sig-quard_options.php:139
 msgid "If it does not checked, subfolder index.php will show empty page only. If it is checked, any request for subfolder content listing will be redirected to your blog root"
 msgstr "Sofern es nicht ausgewaehlt ist, wird bei Abfrage eines Unterverzeichnisses eine leere Seite angezeigt. Ist dieser Punkt ausgewaehlt wird jede Anfrage fuer dieses Unterverzeichnis automatisch auf die Startseite des Blogs weitergeleitet."
 
-#: ../sig-quard_options.php:147
+#: ../sig-quard_options.php:145
 msgid "Modify Apache .htaccess"
 msgstr "Aendere die Apache .htaccess"
 
-#: ../sig-quard_options.php:150
+#: ../sig-quard_options.php:148
 msgid ""
 "Modify Apache .htaccess file in the site root folder. Add \"Options -Indexes\" line to prevent directory listing by Apache Web server.\n"
 "                      If it is turned on (+Indexes) or absent, then if a URL which maps to a directory is requested, and there is no DirectoryIndex (e.g., index.html or index.php) file in that directory, then Web server will return a formatted listing of the directory."
@@ -118,71 +119,71 @@ msgstr ""
 "Aendere die Apache .htaccess Datei im Stammverzeichnis.  Fuege eine \"Options -Indexes\" Zeile zum Schutz der Verzeichnisliste vom Apache Webserver hinzu. \n"
 "                      Ist es eingeschaltet (+Indexes) oder fehlt es und jemand die Seite aufruft und es gibt keinen Verzeichnisschutz  (z.B eine, index.html oder index.php) in diesem Verzeichnis, dann zeigt der Webserver alle Datein oder Verzeichnisse an."
 
-#: ../sig-quard_options.php:158
+#: ../sig-quard_options.php:156
 msgid "Delete readme.txt"
 msgstr "Loesche die readme.txt"
 
-#: ../sig-quard_options.php:161
+#: ../sig-quard_options.php:159
 msgid "If it is checked, plugin will delete unused readme.txt, documentation.txt, changelog.txt files from every plugin folder"
 msgstr "Wenn aktiviert, loescht das Plugin unbenutzte readme.txt, documentation.txt, changelog.txt Datein von jedem Pluginordner."
 
-#: ../sig-quard_options.php:168
+#: ../sig-quard_options.php:166
 msgid "Delete screenshot files"
 msgstr "Loesche die Screenshot Datein"
 
-#: ../sig-quard_options.php:171
+#: ../sig-quard_options.php:169
 msgid "If it is checked, plugin will delete unused screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg) from every plugin folder"
 msgstr "Wenn aktiviert, loescht das Plugin nicht benoetigte  screenshot-1.gif, screenshot-2.gif (oder .png, .jpg) Datein, von allen Plugin Ordnern."
 
-#: ../sig-quard_options.php:177
+#: ../sig-quard_options.php:175
 msgid "Auto Monitor"
 msgstr "Automatische Ueberpruefung"
 
-#: ../sig-quard_options.php:180
+#: ../sig-quard_options.php:178
 msgid "Check folders state automatically once a day"
 msgstr "Aktiviere zur Ueberpruefung 1x am Tag"
 
-#: ../sig-quard_options.php:187
+#: ../sig-quard_options.php:185
 msgid "Hide WordPress version"
 msgstr "Verstecke die WordPress Version"
 
-#: ../sig-quard_options.php:190
+#: ../sig-quard_options.php:188
 msgid "If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name=\"generator\" content=\"WordPress 2.9.2\"/&gt; from your blog pages"
 msgstr "Wenn aktiviert, entfernt das Plugin die WordPress Versionsnummer, zb. &lt;meta name=\"generator\" content=\"WordPress 2.9.2\"/&gt; von allen Blogseiten"
 
-#: ../sig-quard_options.php:197
+#: ../sig-quard_options.php:195
 msgid "Log errors to .log file"
 msgstr "Speicher die Fehler in der .log Datei"
 
-#: ../sig-quard_options.php:200
+#: ../sig-quard_options.php:198
 msgid "If it is checked, plugin will write information about any errors during scan process to .log file in SIG plugin directory"
 msgstr "Wenn aktviert, wird jeder Fehler in der .log Datei festgehalten, welche im SIG Plugin Verzeichnis zu finden ist."
 
-#: ../sig-quard_options.php:204
+#: ../sig-quard_options.php:202
 msgid "Note: Save your changes in options by press \"Update\" button before take any Rebuild or Scan actions."
 msgstr "WICHTIG: zuerst, nach Aenderungen,  \"Aktualisiere\" klicken, bevor du Abfragen startest."
 
-#: ../sig-quard_options.php:207
+#: ../sig-quard_options.php:205
 msgid "Update"
 msgstr "Aktualisiere"
 
-#: ../sig-quard_options.php:207
+#: ../sig-quard_options.php:205
 msgid "Save Changes"
 msgstr "Aenderungen speichern"
 
-#: ../sig-quard_options.php:208
+#: ../sig-quard_options.php:206
 msgid "Cancel"
 msgstr "Abbruch"
 
-#: ../sig-quard_options.php:208
+#: ../sig-quard_options.php:206
 msgid "Cancel not saved changes"
 msgstr "Abbruch ohne speichern"
 
-#: ../sig-quard_options.php:209
+#: ../sig-quard_options.php:207
 msgid "Scan Now"
 msgstr "Jetzt suchen"
 
-#: ../sig-quard_options.php:209
+#: ../sig-quard_options.php:207
 msgid "Scan and Fix directories, plugins version listing related problems Now"
 msgstr "Suche und erstelle die Datein damit die Verzeichnise nicht eingesehen werden koennen."
 
@@ -273,13 +274,4 @@ msgstr "%s ungenutzte Datein sind geloescht"
 #: ../sig-guard_lib.php:511
 msgid "Return back to SIG Guard Settings Page"
 msgstr "Zurueck zur SIG Guard Einstellungsseite"
-
-#: ../sig-guard_lib.php:533
-#: ../sig-guard_lib.php:548
-msgid "No items found."
-msgstr ""
-
-#: ../sig-guard_lib.php:536
-msgid "Recent Posts:"
-msgstr ""
 

@@ -1,274 +1,279 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Silence is Golden Guard 1.2\n"
+"Project-Id-Version: Silence Is Golden Guard Plugin 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-12 17:39+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Vladimir <vladimir@shinephp.com>\n"
-"Language-Team: ShinePHP.com <vladimir@shinephp.com>\n"
+"Language-Team: Whiler <webmaster@blogs.wittwer.fr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: English\n"
-"X-Poedit-Country: RUSSIAN FEDERATION\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
 
 #: ../sig-quard_options.php:46
 msgid "About this Plugin:"
-msgstr ""
+msgstr "عن الاضافه :"
 
 #: ../sig-quard_options.php:47
 msgid "Author's website"
-msgstr ""
+msgstr "موقع المبرمج"
 
 #: ../sig-quard_options.php:48
 msgid "Plugin webpage"
-msgstr ""
+msgstr "صفحة الاضافه"
 
 #: ../sig-quard_options.php:49
 #: ../sig-guard.php:138
 msgid "Changelog"
-msgstr ""
+msgstr "تغيير السجل"
 
 #: ../sig-quard_options.php:50
 msgid "FAQ"
-msgstr ""
+msgstr "اسئله شائعه"
 
 #: ../sig-quard_options.php:51
 msgid "Donate"
-msgstr ""
+msgstr "ادعمنا"
 
 #: ../sig-quard_options.php:54
 msgid "Greetings:"
-msgstr ""
+msgstr "مرحبا :"
 
 #: ../sig-quard_options.php:55
 msgid "It's me, the author"
-msgstr ""
+msgstr "هذا انا , مبرمج الاضافه"
 
 #: ../sig-quard_options.php:56
 msgid "for the help with Arabic translation"
-msgstr ""
+msgstr "للمساعده فى الترجمه باللغه العربيه"
 
 #: ../sig-quard_options.php:57
 msgid "for the help with French translation"
-msgstr ""
+msgstr "للمساعده فى الترجمه باللغه الفرنسيه"
 
 #: ../sig-quard_options.php:58
 msgid "for the help with German translation"
-msgstr ""
+msgstr "للمساعده فى الترجمه للغه الألمانيه"
 
 #: ../sig-quard_options.php:59
 msgid "For the help with Italian translation"
-msgstr ""
+msgstr "للمساعده فى الترجمه للغه الايطاليه"
 
 #: ../sig-quard_options.php:60
 msgid "for the help with Spanish translation"
-msgstr ""
+msgstr "للمساعده فى الترجمه باللغه الاسبانيه"
 
 #: ../sig-quard_options.php:61
 msgid "Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated."
-msgstr ""
+msgstr "هل ترغب فى رؤية اسمك ورابط موقعك هنا ؟ مرحبا بك ! قم بترجمة الاضافه الى لغتك واطرح علينا افكارا جديده"
 
 #: ../sig-quard_options.php:87
 #: ../sig-guard.php:128
 msgid "Settings"
-msgstr ""
+msgstr "الاعدادات"
 
 #: ../sig-quard_options.php:93
 msgid "Does not create index.php file in the checked folders"
-msgstr ""
+msgstr "لا تضع ملف اندكس فى الملفات المشار اليها"
 
 #: ../sig-quard_options.php:94
 msgid "Exclude Folders"
-msgstr ""
+msgstr "تجاهل الملفات التاليه ( بحيث لا يتم وضع ملفات اندكس بداخلها )"
 
 #: ../sig-quard_options.php:98
 msgid "Checked folders are fully excluded from SIG Guard plugin activity"
-msgstr ""
+msgstr "المجلدات التى تقوم بالاشاره اليها سيتم تجاهلها تماما بواسطة الاضافه"
 
 #: ../sig-quard_options.php:133
 msgid "index.php Redirect"
-msgstr ""
+msgstr "اعادة التحويل بواسطة ملف الاندكس"
 
 #: ../sig-quard_options.php:135
 msgid "Rebuild All"
-msgstr ""
+msgstr "قم باعادة بناء كافة المجلدات"
 
 #: ../sig-quard_options.php:135
 msgid "Rebuild All subfolder index.php files. It is useful if you changed redirection option above."
-msgstr ""
+msgstr "قم بفحص كافة المجلدات الفرعيه للتأكد من وجود ملف الاندكس ( هذا الخيار مفيد اذا قمت بتغيير خيار التحويل بأعلى )"
 
 #: ../sig-quard_options.php:139
 msgid "If it does not checked, subfolder index.php will show empty page only. If it is checked, any request for subfolder content listing will be redirected to your blog root"
-msgstr ""
+msgstr "تجاهل هذا الخيار اذا كنت ترغب بعرض صفحه بيضاء عند محاولة عرض محتوى المجلد ,, اما اذا كنت ترغب باعادة تحويل الزائر الى الصفحه الرئيسيه للموقع قم باختياره"
 
 #: ../sig-quard_options.php:145
 msgid "Modify Apache .htaccess"
-msgstr ""
+msgstr "تعديل ملف htaccess للاباتشى"
 
 #: ../sig-quard_options.php:148
 msgid ""
 "Modify Apache .htaccess file in the site root folder. Add \"Options -Indexes\" line to prevent directory listing by Apache Web server.\n"
 "                      If it is turned on (+Indexes) or absent, then if a URL which maps to a directory is requested, and there is no DirectoryIndex (e.g., index.html or index.php) file in that directory, then Web server will return a formatted listing of the directory."
 msgstr ""
+"تعديل ملف htaccess فى مجلد موقعك الرئيسى. اضافة سطر \"Options -Indexes\" لحماية محتوى المجلدات من استعراضها بواسطة السيرفر.\n"
+"                      فى حالة التفعيل او التعطيل, فانه عند محاولة استعراض محتوى مجلد معين لا يحتوى على ملف اندكس, مثل ( index.html or index.php) , فان السيرفر سيقوم بالاستعراض الطبيعى للمجلدات"
 
 #: ../sig-quard_options.php:156
 msgid "Delete readme.txt"
-msgstr ""
+msgstr "مسح ملفات readme.txt"
 
 #: ../sig-quard_options.php:159
 msgid "If it is checked, plugin will delete unused readme.txt, documentation.txt, changelog.txt files from every plugin folder"
-msgstr ""
+msgstr "اذا قمت باختياره ستقوم الاضافه بحذف كافة ملفات readme.txt, documentation.txt, changelog.txt الموجوده داخل مجلدات الاضافات"
 
 #: ../sig-quard_options.php:166
 msgid "Delete screenshot files"
-msgstr ""
+msgstr "حذف صور معاينة الاضافات"
 
 #: ../sig-quard_options.php:169
 msgid "If it is checked, plugin will delete unused screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg) from every plugin folder"
-msgstr ""
+msgstr "اذا قمت باختياره سنقوم بحذف صور المعاينه للاضافات مثل screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg)"
 
 #: ../sig-quard_options.php:175
 msgid "Auto Monitor"
-msgstr ""
+msgstr "البحث التلقائى فى المجلدات"
 
 #: ../sig-quard_options.php:178
 msgid "Check folders state automatically once a day"
-msgstr ""
+msgstr "قم بفحص حالة المجلدات مره واحده يوميا"
 
 #: ../sig-quard_options.php:185
 msgid "Hide WordPress version"
-msgstr ""
+msgstr "اخفاء رقم اصدار نسخة الوورد بريس المستخدمه"
 
 #: ../sig-quard_options.php:188
 msgid "If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name=\"generator\" content=\"WordPress 2.9.2\"/&gt; from your blog pages"
-msgstr ""
+msgstr "اذا قمت قمت باختياره ستقوم الاضافه باخفاء اصدار نسخة وورد بريس الحاليه من كافة الصفحات مثال :  (e.g. &lt;meta name=\"generator\" content=\"WordPress 2.9.2\"/&gt; )"
 
 #: ../sig-quard_options.php:195
 msgid "Log errors to .log file"
-msgstr ""
+msgstr "قم بتسجيل الاخطاء فى ملف لوج"
 
 #: ../sig-quard_options.php:198
 msgid "If it is checked, plugin will write information about any errors during scan process to .log file in SIG plugin directory"
-msgstr ""
+msgstr "فى حالة تفعيل هذا الخيار ستقوم الاضافه بتخزين كافة الاخطاء فى ملف لوج داخل مجلد الاضافه"
 
 #: ../sig-quard_options.php:202
 msgid "Note: Save your changes in options by press \"Update\" button before take any Rebuild or Scan actions."
-msgstr ""
+msgstr "ملاحظه: قم بالضغط على زر حفظ قبل الضغط على زر افحص المجلدات الان"
 
 #: ../sig-quard_options.php:205
 msgid "Update"
-msgstr ""
+msgstr "حفظ"
 
 #: ../sig-quard_options.php:205
 msgid "Save Changes"
-msgstr ""
+msgstr "حفظ الخيارات"
 
 #: ../sig-quard_options.php:206
 msgid "Cancel"
-msgstr ""
+msgstr "الغاء"
 
 #: ../sig-quard_options.php:206
 msgid "Cancel not saved changes"
-msgstr ""
+msgstr "فى حالة الالغاء لن نتمكن من حفظ التعديلات"
 
 #: ../sig-quard_options.php:207
 msgid "Scan Now"
-msgstr ""
+msgstr "افحص المجلدات الآن"
 
 #: ../sig-quard_options.php:207
 msgid "Scan and Fix directories, plugins version listing related problems Now"
-msgstr ""
+msgstr "قم بالفحص الان ومعالجة مشاكل عرض اصدارات الاضافات وعرض محتوى المجلدات والمشاكل الاخرى"
 
 #: ../sig-guard.php:38
 msgid "Silence is Golden Guard requires WordPress 3.0 or newer."
-msgstr ""
+msgstr "هذه الاضافة تعمل فقط على اصدار وورد بريس 3.0  ومافوقها "
 
 #: ../sig-guard.php:38
 msgid "Please update!"
-msgstr ""
+msgstr "الرجاء قم بالتحديث !"
 
 #: ../sig-guard.php:73
 msgid "Silence Is Golden Guard Plugin"
-msgstr ""
+msgstr "اضافة Silence is Golden Guard"
 
 #: ../sig-guard_lib.php:127
 #: ../sig-guard_lib.php:181
 #: ../sig-guard_lib.php:282
 msgid "file open error"
-msgstr ""
+msgstr "حدث خطأ  عند محاولة فتح الملف"
 
 #: ../sig-guard_lib.php:137
 msgid "file read error"
-msgstr ""
+msgstr "حدث خطا عند محاولة قراءة الملف"
 
 #: ../sig-guard_lib.php:150
 #: ../sig-guard_lib.php:213
 #: ../sig-guard_lib.php:337
 msgid "file close error"
-msgstr ""
+msgstr "حدث خطأ عند محاولة اغلاق الملف"
 
 #: ../sig-guard_lib.php:161
 msgid "file backup copy error"
-msgstr ""
+msgstr "حدث خطا عند محاولة نسخ الملف"
 
 #: ../sig-guard_lib.php:169
 #: ../sig-guard_lib.php:221
 msgid "file permissions change error"
-msgstr ""
+msgstr "حدث خطا عند محاولة تغيير تصاريح الملف"
 
 #: ../sig-guard_lib.php:189
 #: ../sig-guard_lib.php:197
 #: ../sig-guard_lib.php:205
 #: ../sig-guard_lib.php:328
 msgid "file write error"
-msgstr ""
+msgstr "خطا فى الكتابه على الملف"
 
 #: ../sig-guard_lib.php:229
 msgid "is modified"
-msgstr ""
+msgstr "تم تعديله"
 
 #: ../sig-guard_lib.php:239
 #: ../sig-guard_lib.php:345
 msgid "permissions change error"
-msgstr ""
+msgstr "خطأ فى تغيير التصاريح"
 
 #: ../sig-guard_lib.php:257
 msgid "file delete error"
-msgstr ""
+msgstr "خطأ عند حذف الملف"
 
 #: ../sig-guard_lib.php:312
 msgid "file create error"
-msgstr ""
+msgstr "خطا فى انشاء الملف"
 
 #: ../sig-guard_lib.php:354
 msgid "file is created"
-msgstr ""
+msgstr "تم انشاء الملف"
 
 #: ../sig-guard_lib.php:377
 #: ../sig-guard_lib.php:418
 msgid "is deleted"
-msgstr ""
+msgstr "تم حذفه"
 
 #: ../sig-guard_lib.php:508
 msgid "\"Silence is Golden\" scan is finished:"
-msgstr ""
+msgstr "\"Silence is Golden\" انتهى من فحص المجلدات"
 
 #: ../sig-guard_lib.php:509
 #, php-format
 msgid "%s index.php files are created"
-msgstr ""
+msgstr " %s index.php تم انشاء كافة ملفات"
 
 #: ../sig-guard_lib.php:510
 #, php-format
 msgid "%s unused files are deleted"
-msgstr ""
+msgstr "%s من الملفات الغير مستخدمه تم حذفها"
 
 #: ../sig-guard_lib.php:511
 msgid "Return back to SIG Guard Settings Page"
-msgstr ""
+msgstr "الرجوع مره اخرى الى صفحة الاعدادات"
+
+#~ msgid "More plugins from"
+#~ msgstr "المزيد من الاضافات من"
+#~ msgid "No items found."
+#~ msgstr "لم يتم ايجاد عناصر "
+#~ msgid "Recent Posts:"
+#~ msgstr "جديد الموضوعات:"
 

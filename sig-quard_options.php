@@ -51,11 +51,9 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
                       <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/donate-icon.png'; ?>)" target="_blank" href="http://www.shinephp.com/donate"><?php _e('Donate', 'sig-guard'); ?></a>
 <?php
 sig_guard_displayBoxEnd();
-sig_guard_displayBoxStart(__('More plugins from','sig-guard').' <a href="http://www.shinephp.com" title="ShinePHP.com">ShinePHP.com</a>', 'float: left; display: inline; margin-left: 10px; width: 350px;');
-sig_guard_shinephpNews();
-sig_guard_displayBoxEnd();
 sig_guard_displayBoxStart(__('Greetings:','sig-guard')); ?>
 											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo $shinephpFavIcon; ?>);" target="_blank" title="<?php _e("It's me, the author", 'sig-guard'); ?>" href="http://www.shinephp.com/">Vladimir</a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/mrahmad.png'; ?>);" target="_blank" title="<?php _e('for the help with Arabic translation', 'sig-guard'); ?>" href="http://egylovers.com">mr.Ahmad</a>
                       <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/whiler.png'; ?>);" target="_blank" title="<?php _e('for the help with French translation', 'sig-guard'); ?>" href="http://blogs.wittwer.fr/whiler/">Whiler</a>
                       <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/tom.png'; ?>);" target="_blank" title="<?php _e('for the help with German translation', 'sig-guard'); ?>" href="http://cash-india.info">Tom</a>
                       <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/alessandro.png'; ?>);" target="_blank" title="<?php _e("For the help with Italian translation",'pgc');?>" href="http://technodin.org">Alessandro Mariani</a>
