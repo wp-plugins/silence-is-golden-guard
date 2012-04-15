@@ -8,9 +8,9 @@ if (!defined('SIG_GUARD_PLUGIN_URL')) {
   die;  // Silence is golden, direct call is prohibited
 }
 
-function sig_guard_displayBoxStart($title) {
+function sig_guard_displayBoxStart($title, $add_style='') {
 ?>
-			<div class="postbox" style="float: left;">
+			<div class="postbox" style="float: left; <?php echo $add_style; ?>">
 				<h3 style="cursor:default;"><span><?php echo $title ?></span></h3>
 				<div class="inside">
 <?php
@@ -40,30 +40,9 @@ if (isset($_GET['action']) && ($_GET['action']=='scan' || $_GET['action']=='rebu
 <?php
     settings_fields('sig-quard-options');
 ?>
-				<div id="poststuff" class="metabox-holder has-right-sidebar">
-					<div class="inner-sidebar" >
-						<div id="side-sortables" class="meta-box-sortabless ui-sortable" style="position:relative;">
-									<?php sig_guard_displayBoxStart(__('About this Plugin:', 'sig-guard')); ?>
-											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo $shinephpFavIcon; ?>);" target="_blank" href="http://www.shinephp.com/"><?php _e("Author's website", 'sig-guard'); ?></a>
-											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/sig-guard-icon.png'; ?>" target="_blank" href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/"><?php _e('Plugin webpage', 'sig-guard'); ?></a>
-											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/changelog-icon.png'; ?>);" target="_blank" href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/#changelog"><?php _e('Changelog', 'sig-guard'); ?></a>
-											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/faq-icon.png'; ?>)" target="_blank" href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/#faq"><?php _e('FAQ', 'sig-guard'); ?></a>
-                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/donate-icon.png'; ?>)" target="_blank" href="http://www.shinephp.com/donate"><?php _e('Donate', 'sig-guard'); ?></a>
-<?php
-sig_guard_displayBoxEnd();
-sig_guard_displayBoxStart(__('Greetings:','sig-guard')); ?>
-											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo $shinephpFavIcon; ?>);" target="_blank" title="<?php _e("It's me, the author", 'sig-guard'); ?>" href="http://www.shinephp.com/">Vladimir</a>
-                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/mrahmad.png'; ?>);" target="_blank" title="<?php _e('for the help with Arabic translation', 'sig-guard'); ?>" href="http://egylovers.com">mr.Ahmad</a>
-                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/whiler.png'; ?>);" target="_blank" title="<?php _e('for the help with French translation', 'sig-guard'); ?>" href="http://blogs.wittwer.fr/whiler/">Whiler</a>
-                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/tom.png'; ?>);" target="_blank" title="<?php _e('for the help with German translation', 'sig-guard'); ?>" href="http://cash-india.info">Tom</a>
-                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/alessandro.png'; ?>);" target="_blank" title="<?php _e("For the help with Italian translation",'pgc');?>" href="http://technodin.org">Alessandro Mariani</a>
-                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/omi.png'; ?>);" target="_blank" title="<?php _e('for the help with Spanish translation', 'sig-guard'); ?>" href="http://equipajedemano.info">Omi</a>
-											<?php _e('Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated.', 'sig-guard'); ?>
-									<?php sig_guard_displayBoxEnd(); ?>
-						</div>
-					</div>
+				<div id="poststuff" class="metabox-holder has-right-sidebar">					
 					<div class="has-sidebar" >
-						<div id="post-body-content" class="has-sidebar-content">
+						<div id="post-body-content" class="has-sidebar-content" style="max-width: 800px;">
 <script language="javascript" type="text/javascript">
   function sig_guard_hideShowDiv(checkbox) {
     var el = document.getElementById('foldersdiv')
@@ -200,13 +179,38 @@ sig_guard_displayBoxStart(__('Greetings:','sig-guard')); ?>
         </tr>
       </table>
       <span style="color: green;"><?php _e('Note: Save your changes in options by press "Update" button before take any Rebuild or Scan actions.','sig-guard'); ?></span>
-			<?php sig_guard_displayBoxEnd();?>
-      <div class="fli submit" style="padding-top: 0px;">
+      <div class="fli submit" style="padding-top: 10px;">
           <input type="submit" name="submit" value="<?php _e('Update', 'sig-guard'); ?>" title="<?php _e('Save Changes', 'sig-guard'); ?>" />
           <input type="button" name="cancel" value="<?php _e('Cancel', 'sig-guard') ?>" title="<?php _e('Cancel not saved changes','sig-guard');?>" onclick="sig_guard_Settings('cancel');"/>
           <input type="button" name="scanNow" value="<?php _e('Scan Now', 'sig-guard') ?>" title="<?php _e('Scan and Fix directories, plugins version listing related problems Now','sig-guard');?>" onclick="sig_guard_Settings('scan');"/>
-      </div>
+      </div>      
+<?php sig_guard_displayBoxEnd();?>      
 						</div>
 					</div>
+        <div class="inner-sidebar" style="float: right; display: inline;">
+						<div id="side-sortables" class="meta-box-sortabless ui-sortable" style="position:relative;">
+<?php sig_guard_displayBoxStart(__('About this Plugin:', 'sig-guard')); ?>
+											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo $shinephpFavIcon; ?>);" target="_blank" href="http://www.shinephp.com/"><?php _e("Author's website", 'sig-guard'); ?></a>
+											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/sig-guard-icon.png'; ?>" target="_blank" href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/"><?php _e('Plugin webpage', 'sig-guard'); ?></a>
+											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/changelog-icon.png'; ?>);" target="_blank" href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/#changelog"><?php _e('Changelog', 'sig-guard'); ?></a>
+											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/faq-icon.png'; ?>)" target="_blank" href="http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/#faq"><?php _e('FAQ', 'sig-guard'); ?></a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/donate-icon.png'; ?>)" target="_blank" href="http://www.shinephp.com/donate"><?php _e('Donate', 'sig-guard'); ?></a>
+<?php
+sig_guard_displayBoxEnd();
+?>
+<div style="clear: left;"></div>
+<?php
+sig_guard_displayBoxStart(__('Greetings:','sig-guard'), 'display: block; max-width: 200px;'); ?>
+											<a class="sig_guard_rsb_link" style="background-image:url(<?php echo $shinephpFavIcon; ?>);" target="_blank" title="<?php _e("It's me, the author", 'sig-guard'); ?>" href="http://www.shinephp.com/">Vladimir</a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/mrahmad.png'; ?>);" target="_blank" title="<?php _e('for the help with Arabic translation', 'sig-guard'); ?>" href="http://egylovers.com">mr.Ahmad</a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/whiler.png'; ?>);" target="_blank" title="<?php _e('for the help with French translation', 'sig-guard'); ?>" href="http://blogs.wittwer.fr/whiler/">Whiler</a>
+                      <a class="sig_guard_rsb_link" target="_blank" title="<?php _e('for the help with German translation', 'sig-guard'); ?>" href="http://cash-india.info">Tom</a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/alessandro.png'; ?>);" target="_blank" title="<?php _e("For the help with Italian translation",'pgc');?>" href="http://technodin.org">Alessandro Mariani</a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/host1free.png'; ?>)" target="_blank" title="<?php _e("For the help with Lithuanian translation", 'ure'); ?>" href="http://host1free.com">Vincent G</a>
+                      <a class="sig_guard_rsb_link" style="background-image:url(<?php echo SIG_GUARD_PLUGIN_URL.'/images/omi.png'; ?>);" target="_blank" title="<?php _e('for the help with Spanish translation', 'sig-guard'); ?>" href="http://equipajedemano.info">Omi</a>
+											<?php _e('Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated.', 'sig-guard'); ?>
+									<?php sig_guard_displayBoxEnd(); ?>
+						</div>
+					</div>          
 				</div>
     </form>

@@ -1,0 +1,276 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Silence is Golden Guard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-13 23:00+0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Tom <office@estreetbeat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../sig-quard_options.php:46
+msgid "About this Plugin:"
+msgstr "Apie šį Papildinį:"
+
+#: ../sig-quard_options.php:47
+msgid "Author's website"
+msgstr "Autoriaus svetainė"
+
+#: ../sig-quard_options.php:48
+msgid "Plugin webpage"
+msgstr "Papildinio puslapis"
+
+#: ../sig-quard_options.php:49
+#: ../sig-guard.php:138
+msgid "Changelog"
+msgstr "Pasikeitimų žurnalas"
+
+#: ../sig-quard_options.php:50
+msgid "FAQ"
+msgstr "DUK"
+
+#: ../sig-quard_options.php:51
+msgid "Donate"
+msgstr "Paaukokite"
+
+#: ../sig-quard_options.php:54
+msgid "Greetings:"
+msgstr "Pasisveikinimai:"
+
+#: ../sig-quard_options.php:55
+msgid "It's me, the author"
+msgstr "Čia aš, autorius"
+
+#: ../sig-quard_options.php:56
+msgid "for the help with Arabic translation"
+msgstr "Ieškant pagalbos, verčiant į arabų kalbą"
+
+#: ../sig-quard_options.php:57
+msgid "for the help with French translation"
+msgstr "Ieškant pagalbos, verčiant į prancūzų kalbą"
+
+#: ../sig-quard_options.php:58
+msgid "for the help with German translation"
+msgstr "Ieškant pagalbos, verčiant į vokiečių kalbą"
+
+#: ../sig-quard_options.php:59
+msgid "For the help with Italian translation"
+msgstr "Ieškant pagalbos, verčiant į italų kalbą"
+
+#: ../sig-quard_options.php:60
+msgid "for the help with Spanish translation"
+msgstr "Ieškant pagalbos, verčiant į ispanų kalbą"
+
+#: ../sig-quard_options.php:61
+msgid "Do you wish to see your name with link to your site here? You are welcome! Your help with translation and new ideas are very appreciated."
+msgstr "Ar čia norėtumėte matyti savo vardą su nuoroda į Jūsų tinklapį? Maloniai prašome! Jūsų pagalba verčiant ir pateikiant naujas idėjas yra labai laukiama."
+
+#: ../sig-quard_options.php:87
+#: ../sig-guard.php:128
+msgid "Settings"
+msgstr "Nuostatos"
+
+#: ../sig-quard_options.php:93
+msgid "Does not create index.php file in the checked folders"
+msgstr "Nesukuria index.php rinkmenos pažymėtuose aplankuose"
+
+#: ../sig-quard_options.php:94
+msgid "Exclude Folders"
+msgstr "Išskirti Aplankus"
+
+#: ../sig-quard_options.php:98
+msgid "Checked folders are fully excluded from SIG Guard plugin activity"
+msgstr "Pažymėti aplankai yra pilnai išskirti iš SIG Guard papildinio veiklos zonos"
+
+#: ../sig-quard_options.php:133
+msgid "index.php Redirect"
+msgstr "index.php Peradresavimas"
+
+#: ../sig-quard_options.php:135
+msgid "Rebuild All"
+msgstr "Perdaryti Viską"
+
+#: ../sig-quard_options.php:135
+msgid "Rebuild All subfolder index.php files. It is useful if you changed redirection option above."
+msgstr "Perdaryti Visas subaplankines index.php rinkmenas. Tai naudinga jeigu Jūs pakeitėte peradresavimo parinktį aukščiau."
+
+#: ../sig-quard_options.php:139
+msgid "If it does not checked, subfolder index.php will show empty page only. If it is checked, any request for subfolder content listing will be redirected to your blog root"
+msgstr "Jeigu tai nepažymėta, subaplankas index.php rodys tik tuščią puslapį. Jeigu pažymėta, bet kuri subaplanko turinio pateikimo užklausa bus peradresuota į Jūsų tinklaraščio šaknį"
+
+#: ../sig-quard_options.php:145
+msgid "Modify Apache .htaccess"
+msgstr "Modifikuoti Apache .htaccess"
+
+#: ../sig-quard_options.php:148
+msgid ""
+"Modify Apache .htaccess file in the site root folder. Add \"Options -Indexes\" line to prevent directory listing by Apache Web server.\n"
+"                      If it is turned on (+Indexes) or absent, then if a URL which maps to a directory is requested, and there is no DirectoryIndex (e.g., index.html or index.php) file in that directory, then Web server will return a formatted listing of the directory."
+msgstr ""
+"Modifikuoti Apache .htacess rinkmeną tinklapio šaknies aplanke. Pridėti  \"Parinktys -Indeksai\" eilutę, kad uždrausti Apache Tinklo serverio katalogų rodymą. \n"
+"                      Jeigu tai yra įjungta (+Indeksai) arba to iš viso nėra, tai  užklausos katalogo universalioji nuoroda (nesant direktorijų indekso, pvz index.html ar index.php rinkmenos toje direktorijoje), įtakos, jog Tinklo serveris pateiks formatuotą katalogo sąrašą."
+
+#: ../sig-quard_options.php:156
+msgid "Delete readme.txt"
+msgstr "Ištrinti readme.txt"
+
+#: ../sig-quard_options.php:159
+msgid "If it is checked, plugin will delete unused readme.txt, documentation.txt, changelog.txt files from every plugin folder"
+msgstr "Jeigu pažymėta, papildinys ištrins nepanaudotas readme.txt, documentation.txt, changelog.txt rinkmenas iš kiekvieno papildinio aplanko"
+
+#: ../sig-quard_options.php:166
+msgid "Delete screenshot files"
+msgstr "Ištrinti momentinių ekrano kopijų rinkmenas"
+
+#: ../sig-quard_options.php:169
+msgid "If it is checked, plugin will delete unused screenshot-1.gif, screenshot-2.gif, etc. files (or .png, .jpg) from every plugin folder"
+msgstr "Jeigu pažymėta, papildinys ištrins nepanaudotas screenshot-1.gif, screenshot-2.gif, etc. rinkmenas (arba .png, .jpg) iš kiekvieno papildinio aplanko"
+
+#: ../sig-quard_options.php:175
+msgid "Auto Monitor"
+msgstr "Automatinis Monitorius"
+
+#: ../sig-quard_options.php:178
+msgid "Check folders state automatically once a day"
+msgstr "Patikrinti aplankų būseną automatiškai kartą per dieną"
+
+#: ../sig-quard_options.php:185
+msgid "Hide WordPress version"
+msgstr "Paslėpti WordPress versiją"
+
+#: ../sig-quard_options.php:188
+msgid "If it is checked, plugin will remove WordPress version information, e.g. &lt;meta name=\"generator\" content=\"WordPress 2.9.2\"/&gt; from your blog pages"
+msgstr "Jeigu pažymėta, papildinys pašalins WordPress versijos informaciją, pvz. e.g. &lt;meta name=\"generator\" content=\"WordPress 2.9.2\"/&gt; iš Jūsų tinklaraščio puslapių"
+
+#: ../sig-quard_options.php:195
+msgid "Log errors to .log file"
+msgstr "Fiksuoja klaidas į .log rinkmeną"
+
+#: ../sig-quard_options.php:198
+msgid "If it is checked, plugin will write information about any errors during scan process to .log file in SIG plugin directory"
+msgstr "Jeigu pažymėta, papildinys įrašys informaciją apie bet kokias peržiūros proceso metu įvykusias klaidas į .log rinkmeną SIG papildinio kataloge"
+
+#: ../sig-quard_options.php:202
+msgid "Note: Save your changes in options by press \"Update\" button before take any Rebuild or Scan actions."
+msgstr "Pastaba: Įrašykite savo parinkčių pakeitimus, paspaudžiant  \"Atnaujinti\"  mygtuką, prieš pradedant bet kokius perdarymo per peržiūros veiksmus."
+
+#: ../sig-quard_options.php:205
+msgid "Update"
+msgstr "Atnaujinti"
+
+#: ../sig-quard_options.php:205
+msgid "Save Changes"
+msgstr "Įrašyti Pakeitimus"
+
+#: ../sig-quard_options.php:206
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: ../sig-quard_options.php:206
+msgid "Cancel not saved changes"
+msgstr "Atšaukti neįrašytus pakeitimus"
+
+#: ../sig-quard_options.php:207
+msgid "Scan Now"
+msgstr "Peržiūrėti dabar"
+
+#: ../sig-quard_options.php:207
+msgid "Scan and Fix directories, plugins version listing related problems Now"
+msgstr "Peržiūrėti ir Tvarkyti katalogus ir problemas, susijusias su papildinių versijų rodymu Dabar"
+
+#: ../sig-guard.php:38
+msgid "Silence is Golden Guard requires WordPress 3.0 or newer."
+msgstr "Silence is Golden Guard reikalauja WordPress 3.0 arba naujesnio."
+
+#: ../sig-guard.php:38
+msgid "Please update!"
+msgstr "Prašome atnaujinti!"
+
+#: ../sig-guard.php:73
+msgid "Silence Is Golden Guard Plugin"
+msgstr "Silence Is Golden Guard Papildinys"
+
+#: ../sig-guard_lib.php:127
+#: ../sig-guard_lib.php:181
+#: ../sig-guard_lib.php:282
+msgid "file open error"
+msgstr "rinkmenos atidarymo klaida"
+
+#: ../sig-guard_lib.php:137
+msgid "file read error"
+msgstr "rinkmenos nuskaitymo klaida"
+
+#: ../sig-guard_lib.php:150
+#: ../sig-guard_lib.php:213
+#: ../sig-guard_lib.php:337
+msgid "file close error"
+msgstr "rinkmenos uždarymo klaida"
+
+#: ../sig-guard_lib.php:161
+msgid "file backup copy error"
+msgstr "rinkmenos atsarginės kopijos kopijavimo klaida"
+
+#: ../sig-guard_lib.php:169
+#: ../sig-guard_lib.php:221
+msgid "file permissions change error"
+msgstr "rinkmenų leidimų keitimo klaida"
+
+#: ../sig-guard_lib.php:189
+#: ../sig-guard_lib.php:197
+#: ../sig-guard_lib.php:205
+#: ../sig-guard_lib.php:328
+msgid "file write error"
+msgstr "rinkmenos rašymo klaida"
+
+#: ../sig-guard_lib.php:229
+msgid "is modified"
+msgstr "yra modifikuotas"
+
+#: ../sig-guard_lib.php:239
+#: ../sig-guard_lib.php:345
+msgid "permissions change error"
+msgstr "leidimų keitimo klaida"
+
+#: ../sig-guard_lib.php:257
+msgid "file delete error"
+msgstr "rinkmenos ištrynimo klaida"
+
+#: ../sig-guard_lib.php:312
+msgid "file create error"
+msgstr "rinkmenos sukūrimo klaida"
+
+#: ../sig-guard_lib.php:354
+msgid "file is created"
+msgstr "rinkmena sukurta"
+
+#: ../sig-guard_lib.php:377
+#: ../sig-guard_lib.php:418
+msgid "is deleted"
+msgstr "ištrinta"
+
+#: ../sig-guard_lib.php:508
+msgid "\"Silence is Golden\" scan is finished:"
+msgstr "\"Silence is Golden\" Peržiūra baigta:"
+
+#: ../sig-guard_lib.php:509
+#, php-format
+msgid "%s index.php files are created"
+msgstr "%s index.php rinkmenos sukurtos"
+
+#: ../sig-guard_lib.php:510
+#, php-format
+msgid "%s unused files are deleted"
+msgstr "%s nepanaudotos rinkmenos ištrintos"
+
+#: ../sig-guard_lib.php:511
+msgid "Return back to SIG Guard Settings Page"
+msgstr "Grįžti atgal į SIG Guard Nuostatų Puslapį"
+

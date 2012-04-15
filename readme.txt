@@ -3,8 +3,8 @@ Contributors: shinephp
 Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 3.0
-Tested up to: 3.3
-Stable tag: 1.8
+Tested up to: 3.4
+Stable tag: 1.8.1
 
 It prevents your blog directories from listing requests with redirect to home page, removes unused txt, screenshot files from plugins directories.
 
@@ -61,6 +61,7 @@ You are welcome! Help me with plugin translation, share with me new ideas about 
 * French: [Whiler](http://blogs.wittwer.fr/whiler/)
 * German: [Tom](http://cash-india.info)
 * Italian: [Alessandro Mariani](http://technodin.org)
+* Lithuanian: [Vincent G](http://host1free.com)
 * Russian: [Vladimir](http://shinephp.com)
 * Spanish: [Omi](http://equipajedemano.info)
 
@@ -69,6 +70,11 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 
 
 == Changelog ==
+
+= 1.8.1 =
+* 15.04.2012
+* Lithuanian translation is added, thanks to Vincent G.
+
 = 1.8 =
 * 12.11.2011
 * Arabic translation is added.
