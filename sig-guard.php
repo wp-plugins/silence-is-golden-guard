@@ -3,7 +3,7 @@
 Plugin Name: Silence Is Golden Guard
 Plugin URI: http://www.shinephp.com/silence-is-golden-guard-wordpress-plugin/
 Description: It prevents your blog directories from full file listing if visitor types just directory name as the URL, e.g. http://yourdomain/wp-content/plugins/
-Version: 1.8.1
+Version: 1.9
 Author: Vladimir Garagulya
 Author URI: http://www.shinephp.com
 Text Domain: sig-guard
@@ -66,6 +66,17 @@ function sig_guard_optionsPage() {
   $sig_guard_redirect_tohomepage = get_option('sig_guard_redirect_tohomepage');
   $sig_guard_hide_wordpress_version = get_option('sig_guard_hide_wordpress_version');
   $sig_guard_log_errors = get_option('sig_guard_log_errors');
+  if (!empty($sig_guard_auto_monitor)) {
+      if ( !wp_next_scheduled('sig_guard_daily_event') ) {
+		  wp_schedule_event( time(), 'daily', 'sig_guard_daily_event');		
+	  }
+  } else {
+	  $timestamp = wp_next_scheduled('sig_guard_daily_event');
+	  if (!empty($timestamp)) {
+		  wp_clear_scheduled_hook('sig_guard_daily_event');
+		  wp_unschedule_event($timestamp, 'sig_guard_daily_event');
+	  }
+  }
 ?>
 
 <div class="wrap">
@@ -156,12 +167,23 @@ function sig_guard_adminCssAction() {
 }
 // end of sig_guard_adminCssAction()
 
+/**
+ * On deactivation, the remove scheduled action hook.
+ */
+function sig_guard_deactivation() {
+	$timestamp = wp_next_scheduled('sig_guard_daily_event');
+	if (!empty($timestamp)) {
+		wp_clear_scheduled_hook('sig_guard_daily_event');
+		wp_unschedule_event($timestamp, 'sig_guard_daily_event');
+	}
+}
 
 
 if (is_admin()) {
   // activation action
-  register_activation_hook(__FILE__, "sig_guard_install");
-
+  register_activation_hook(__FILE__, 'sig_guard_install');
+  register_deactivation_hook(__FILE__, 'sig_guard_deactivation');
+  
   add_action('admin_init', 'sig_guard_init');
   // add a Settings link in the installed plugins page
   add_filter('plugin_action_links', 'sig_guard_plugin_action_links', 10, 2);
@@ -172,21 +194,14 @@ add_action('admin_menu', 'sig_guard_settings_menu');
 
 $sig_guard_auto_monitor = get_option('sig_guard_auto_monitor');
 if ($sig_guard_auto_monitor) {
-  function sig_guard_action() {
-    $sig_guard_last_check = get_option('sig_guard_last_check');
-    if (time() - $sig_guard_last_check > 86400) { // last check was made more then 1 day ago
-      sig_guard_Scan();      
-    }
-  }
-  // end of sig_guard_action()
-
-  add_action('wp_head', 'sig_guard_action');
+	add_action('sig_guard_daily_event', 'sig_guard_Scan');
 }
+
 
 $sig_guard_hide_wordpress_version = get_option('sig_guard_hide_wordpress_version');
 if ($sig_guard_hide_wordpress_version) {
   // exclude WP version from the HTML header
-  add_filter( 'the_generator', create_function('$sig_guard_hide_wordpress_version', "return null;"));
+  add_filter( 'the_generator', create_function('$sig_guard_hide_wordpress_version', 'return null;'));
 }
 
 ?>

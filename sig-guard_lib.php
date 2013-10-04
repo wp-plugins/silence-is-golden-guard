@@ -267,7 +267,7 @@ function sig_fileRemove($fileName, $screenLog=false) {
 // end of sig_fileRemove()
 
 
-function sig_indexFileCheck($indexFile, $sig_mess, $rebuildIndexFile, $screenLog, $filesCreated) {
+function sig_indexFileCheck($indexFile, $sig_mess, $rebuildIndexFile, $screenLog, &$filesCreated) {
 
   $fileExists = file_exists($indexFile);
   if ($fileExists && !$rebuildIndexFile) {
@@ -361,7 +361,7 @@ function sig_indexFileCheck($indexFile, $sig_mess, $rebuildIndexFile, $screenLog
 // end of sig_IndexFileCheck()
 
 
-function sig_deleteReadMeFile($folder, $wp_plugin_dir, $screenLog, $filesDeleted) {
+function sig_deleteReadMeFile($folder, $wp_plugin_dir, $screenLog, &$filesDeleted) {
 
   if (strlen($wp_plugin_dir)<=strlen($folder) && strpos($folder, $wp_plugin_dir)!==false) {
     $fileNames = array('readme.txt', 'README.TXT', 'README.txt', 'version.txt', 'VERSION.txt', 'VERSION.TXT');
@@ -391,12 +391,13 @@ function sig_deleteReadMeFile($folder, $wp_plugin_dir, $screenLog, $filesDeleted
 
 
 // delete all plugins screenshots screenshot*.png, screenshot*.gif, screenshot*.jpg
-function sig_deleteScreenShots($folder, $wp_plugin_dir, $screenLog, $filesDeleted) {
+function sig_deleteScreenShots($folder, $wp_plugin_dir, $screenLog, &$filesDeleted) {
 
   if (strlen($wp_plugin_dir)>strlen($folder) || strpos($folder, $wp_plugin_dir)===false) {
     return true;
   }
 
+	$fileDeleteError = false;
   $dir = @opendir($folder);
   while($fileName = readdir($dir)) {
     if ($fileName == '.' || $fileName == '..') {
@@ -406,7 +407,8 @@ function sig_deleteScreenShots($folder, $wp_plugin_dir, $screenLog, $filesDelete
     if (strpos($fileName1,'screenshot')===false) {
       continue;
     }
-    $extension = end(explode('.', $fileName1));
+    $tmp = explode('.', $fileName1);
+    $extension = end($tmp);
     if ($extension=='png' || $extension=='gif' || $extension=='jpg') {
       $fileName = $folder . $fileName;
       if (!sig_fileRemove($fileName, $screenLog)) {
@@ -482,19 +484,19 @@ function sig_guard_Scan($screenLog = false, $rebuildIndexFile = false) {
     }
 // index.php check/create
     $fileName = $folder.'index.php';
-    if (!sig_indexFileCheck($fileName, $sig_mess, $rebuildIndexFile, $screenLog, &$filesCreated)) {
+    if (!sig_indexFileCheck($fileName, $sig_mess, $rebuildIndexFile, $screenLog, $filesCreated)) {
       continue;
     }
 // readme.txt delete - from wp-content directory only
     if ($sig_guard_delete_readme) {
-      if (!sig_deleteReadMeFile($folder, $wp_plugin_dir, $screenLog, &$filesDeleted)) {
+      if (!sig_deleteReadMeFile($folder, $wp_plugin_dir, $screenLog, $filesDeleted)) {
         continue;
       }
     }  // if ($sig_guard_delete_readme ...
 
 // plugin screenshots delete - from wp-content directory only    
     if ($sig_guard_delete_screenshot) {
-      sig_deleteScreenShots($folder, $wp_plugin_dir, $screenLog, &$filesDeleted);
+      sig_deleteScreenShots($folder, $wp_plugin_dir, $screenLog, $filesDeleted);
     }
     
   }  // foreach ($folders ...

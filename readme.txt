@@ -3,8 +3,8 @@ Contributors: shinephp
 Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 3.0
-Tested up to: 3.4
-Stable tag: 1.8.1
+Tested up to: 3.6.1
+Stable tag: trunk
 
 It prevents your blog directories from listing requests with redirect to home page, removes unused txt, screenshot files from plugins directories.
 
@@ -33,7 +33,6 @@ It could be the case if you use child theme and theme_name-child folder has not 
 == Installation ==
 
 Installation procedure:
-Attention! Starting from version 1.7 plugin works with WordPress 3.0 and higher only. For earlier WordPress versions use plugin version 1.6 from http://downloads.wordpress.org/plugin/silence-is-golden-guard.1.6.zip
 1. Deactivate plugin if you have the previous version installed. (It is important requirement for switching to this version from a previous one.)
 2. Extract "silence-is-golden-guard.x.x.x.zip" archive content to the "/wp-content/plugins/silence-is-golden-guard" directory.
 3. Activate "Silence is Golden Guard" plugin via 'Plugins' menu in WordPress admin menu. 
@@ -70,6 +69,11 @@ if you wish to help me with this plugin translation I very appreciate it. Please
 
 
 == Changelog ==
+
+= 1.9 =
+* 04.10.2013
+* Daily autoscan feature uses WordPress schedule API instead of internal one.
+* Code was updated to provide compatibility with PHP version 5.3+.
 
 = 1.8.1 =
 * 15.04.2012
