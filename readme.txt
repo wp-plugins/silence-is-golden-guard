@@ -3,7 +3,7 @@ Contributors: shinephp
 Donate link: http://www.shinephp.com/donate/
 Tags: index, htaccess, silence, security, guard, DirectoryIndex
 Requires at least: 3.0
-Tested up to: 3.6.1
+Tested up to: 4.0.1
 Stable tag: trunk
 
 It prevents your blog directories from listing requests with redirect to home page, removes unused txt, screenshot files from plugins directories.
